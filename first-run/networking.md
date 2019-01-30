@@ -58,3 +58,11 @@ network={
 
 **Внимание**, файл перезапишет все ваши текущие настройки сети в директории `/etc/`
 
+### Дополнительный команды WiFi
+
+```text
+sudo iwlist wlan0 scan | grep ESSID
+sudo iwlist wlan0 freq
+
+```
+

@@ -18,9 +18,11 @@ ssh pi@turtlebro20.local
 
 Удобно привязать IP адресс робота к MAC адресу.
 
-Для работы под WIndows можно использовать программу [PyTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-
 Для работы по имени вида .local для windows необходимо установить программу [https://support.apple.com/kb/Dl999?locale=ru\_RU](https://support.apple.com/kb/Dl999?locale=ru_RU)
 
 Администраторам системы необходимо настроить поддержку Multicast-DNS.
+
+Для доступа по SSH из **Windows** можно использовать программу [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+
+
 

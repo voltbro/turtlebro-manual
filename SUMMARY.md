@@ -13,8 +13,13 @@
 
 ## Администрирование ROS
 
-* [ROS и RaspberryPi](ros-admin/raspberrypi.md)
-* [Untitled](ros-admin/untitled.md)
+* [RaspberryPi](ros-admin/raspberrypi.md)
+* [Сервисы TurtleBro](ros-admin/services.md)
 
 ## Пакет turtlebro
+
+* [Описание](turtlebro/about.md)
+* [Установка и обновлени](turtlebro/install.md)
+* [Параметры и настройка через launch](turtlebro/params.md)
+* [Плата TurtleBoard](turtlebro/turtleboard-board.md)
 
