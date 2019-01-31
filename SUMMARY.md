@@ -26,4 +26,5 @@
 
 * [Доступные топики](plata-turtleboard/topics.md)
 * [Доступные Сервисы](plata-turtleboard/services.md)
+* [Работа с Arduino](plata-turtleboard/arduino.md)
 
