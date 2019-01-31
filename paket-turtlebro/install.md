@@ -11,7 +11,7 @@ cd ros_catcin_ws/src/
 git clone https://github.com/voltbro/turtlebro
 ```
 
-Обновить пакет
+Обновить пакет \(если пакет был установлен через git\)
 
 ```text
 cd ros_catcin_ws/src/turtlebro
@@ -25,7 +25,7 @@ cd ros_catkin_ws
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/kinetic --pkg=navibro
 ```
 
-При сборке будут перезаписаны все файлы пакета в директорю /opt/ros/kinetic
+При сборке будут перезаписаны все файлы пакета в директорю /opt/ros/kinetic и все файлы управления systemd сервисами.
 
-Далее необходимо перезапустить сервис [turtlebro](../ros-admin/services.md)
+Далее необходимо перезапустить сервис [turtlebro](../administrirovanie-ros/services.md)
 

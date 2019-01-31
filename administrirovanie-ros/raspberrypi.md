@@ -18,7 +18,7 @@
 
 Проще всего загрузить образ на SD-Карту программой Etcher  [https://www.balena.io/etcher/](https://www.balena.io/etcher/) версии программ есть для всех ОС.
 
-После загрузки образа, необходимо заново настроить [WiFi доступ](../first-run/networking.md)
+После загрузки образа, необходимо заново настроить [WiFi доступ](../pervoe-vklyuchenie/networking.md)
 
 Версию образа можно посмотреть в файле /boot/version
 
