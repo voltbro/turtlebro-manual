@@ -2,9 +2,10 @@
 
 * [Инструкция робота TurtleBro](README.md)
 
-## Сборка робота
+## Платформа TurtleBoard
 
-* [Сборка платформы](sborka-robota/untitled.md)
+* [Сборка робота](turtleboard/assembly.md)
+* [Системная плата](turtleboard/board.md)
 
 ## Первое включение
 
