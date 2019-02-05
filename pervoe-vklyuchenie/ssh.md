@@ -6,7 +6,7 @@
 
 Каждый робот имеет уникальное имя вида [turtlebroNN.local](http://turtlebronn.local/) где NN это номер.
 
-При грамотной настройки сети и вашего роутера, вы сможете сразу подключиться к Raspberry по его имени
+При "правильной" настройки сети и вашего роутера, вы сможете сразу подключиться к Raspberry по его имени
 
 ```text
 ssh pi@turtlebro20.local
@@ -23,6 +23,3 @@ ssh pi@turtlebro20.local
 Администраторам системы необходимо настроить поддержку Multicast-DNS.
 
 Для доступа по SSH из **Windows** можно использовать программу [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
-
-
-

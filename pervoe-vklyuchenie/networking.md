@@ -37,7 +37,7 @@ network={
 
 **Настройка через SD карту**
 
-При загрузке, если ОС найдет файл в разделе `/boot/wpa_supplicant.conf`то этот файл будет скопирован в `/etc/wpa_supplicant/wpa_supplicant.conf`
+При загрузке, если Raspberry найдет файл в разделе `/boot/wpa_supplicant.conf` то этот файл будет перемещен в `/etc/wpa_supplicant/wpa_supplicant.conf`
 
 Подключить SD карту к компьютеру
 
@@ -54,15 +54,13 @@ network={
 }
 ```
 
-Установить SD карту в Raspberry и подождать загрузки.
+Установить SD карту в Raspberry и подождать завершение загрузки.
 
-**Внимание**, файл перезапишет все ваши текущие настройки сети в директории `/etc/`
+**Внимание**, файл перезапишет все ваши текущие настройки WiFi в директории `/etc/wpa_supplicant`
 
 ### Дополнительный команды WiFi
 
 ```text
-sudo iwlist wlan0 scan | grep ESSID
-sudo iwlist wlan0 freq
-
+sudo iwlist wlan0 scan | grep ESSID #сканирование сети
+sudo iwlist wlan0 freq  #доступные каналы wifi
 ```
-
