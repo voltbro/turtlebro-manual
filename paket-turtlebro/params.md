@@ -36,10 +36,18 @@ rosservice call /set_pid "Ki: 0.0 Kp: 0.0 Kd: 0.0"
 ```text
 <arg name="run_rosserial" default="true"/>
 <arg name="run_rplidar" default="true"/>
+<arg name="run_uvc_camera" default="false"/>
+<arg name="run_slam_gmapping" default="false"/>
 ```
 
 `run_rosserial` -- запуск rosserial.launch для соединения с Arduino и STM МК  
 `run_rplidar` -- запускать получение данные с RPLidar
+
+`run_uvc_camera` -- включить камеру через пакет uvc\_camera
+
+`run_slam_gmapping` -- включить работу робота в режиме SLAM
+
+
 
 ## Файл rosserial.launch
 
@@ -58,4 +66,8 @@ rosservice call /set_pid "Ki: 0.0 Kp: 0.0 Kd: 0.0"
 Файл для запуска ноды обработки данный с Лидара. Для работы необходим пакет `rplidar` от производителя лидара. Параметры файла настроена для работы с лидаром RPLidar A1 на скорости 115200 через устройство `/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0011-if00-port0`
 
 Данные с лидара отсчитываються отнасительно фрейма `base_scan`
+
+## Файл uvc\_camera.launch
+
+Файл для запуска издателя с данными полученными из фронтальной камеры. Подробнее о [работе с камерой](video.md#paket-uvc_camera)
 
