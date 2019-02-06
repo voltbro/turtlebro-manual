@@ -2,7 +2,7 @@
 
 В стандартной комплектации на робот установлена фронтальная камера. В настройках по умолчанию обработка камеры отключена с целью экономии ресурсов.
 
-Подключить работу камеры необходимо в настройках файла [turtlebro.launch](params.md). Или запустить командой  
+Подключить работу камеры необходимо в настройках файла [turtlebro.launch](params.md). Или запустить командой
 
 ```text
 roslaunch turtlebro uvc_camera.launch
@@ -14,20 +14,21 @@ roslaunch turtlebro uvc_camera.launch
 
 Пакет публикует сжатые данные `sensor_msgs/CompressedImage` в топик `front_camera/compressed`
 
-Официальная документация пакета  [http://wiki.ros.org/uvc\_camera](http://wiki.ros.org/uvc_camera)
+Официальная документация пакета [http://wiki.ros.org/uvc\_camera](http://wiki.ros.org/uvc_camera)
 
 ## Пакет cv\_camera
 
 Данный пакет работает с камерой через библиотеку `ОpenCV`, может работать как в режиме `node` так и `nodelet`
 
-Конфигурация в файле `cv_camera.launch` данные в формате `sensor_msgs/Image` в топик `front_camera/image_raw` Данные передаются в RAW формате (не паковано), что удобно для дальнейшей программной обработки.
+Конфигурация в файле `cv_camera.launch` данные в формате `sensor_msgs/Image` в топик `front_camera/image_raw` Данные передаются в RAW формате \(не паковано\), что удобно для дальнейшей программной обработки.
 
-Конвертация из `sensor_msgs/Image` в формат OpenCV возможен через библиотеку http://wiki.ros.org/cv_bridge
+Конвертация из `sensor_msgs/Image` в формат OpenCV возможен через библиотеку [http://wiki.ros.org/cv\_bridge](http://wiki.ros.org/cv_bridge)
 
 ## Работа с камерой через OpenCV
 
-На работе установлена библиотека `OpenCV`, поэтому с камерой можно работать напрямую подключившись к камере "стандартной" для opencv функцией вида  `cap = cv2.VideoCapture(0)`
+На работе установлена библиотека `OpenCV`, поэтому с камерой можно работать напрямую подключившись к камере "стандартной" для opencv функцией вида `cap = cv2.VideoCapture(0)`
 
 Далее производить с видео все необходимые манипуляции, и после этого при необходимости публиковать видео в топики.
 
 Пример программы на pytnon, которая используя `opencv` следит за цветным мячиком и управляет роботом [ball\_tracking.py](https://github.com/voltbro/turtlebro_examples/blob/master/src/ball_tracking.py)
+

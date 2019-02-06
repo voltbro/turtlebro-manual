@@ -4,8 +4,8 @@
 
 ## Платформа TurtleBoard
 
-* [Сборка робота](turtleboard/assembly.md)
-* [Системная плата](turtleboard/board.md)
+* [Сборка робота](platforma-turtleboard/assembly.md)
+* [Системная плата](platforma-turtleboard/board.md)
 
 ## Первое включение
 

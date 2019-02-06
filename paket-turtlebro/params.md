@@ -8,9 +8,9 @@
 * **stm\_serial\_node/wheel\_distance** double; meters -- расстояние между колесами
 * **stm\_serial\_node/wheel\_param** uint32\_t; number of ticks per meter -- расчетный коэффициент
 * **stm\_serial\_node/motor\_inversion** uint32\_t; 0/1 -- направления вращения колеса отнасительно направления робота
-*   формула для расчета **wheel\_param**:
+* формула для расчета **wheel\_param**:
 
-  **wheel\_param** = ticks\*red\_ratio/circle    
+  **wheel\_param** = ticks\*red\_ratio/circle  
   где
 
   * **ticks** - количество тиков энкодера на один оборот мотора, штук
@@ -47,8 +47,6 @@ rosservice call /set_pid "Ki: 0.0 Kp: 0.0 Kd: 0.0"
 
 `run_slam_gmapping` -- включить работу робота в режиме SLAM
 
-
-
 ## Файл rosserial.launch
 
 Файл запуска нод `stm_serial_node` и `arduino_serial_node` необходимых для работы с Arduino и STM
@@ -70,3 +68,4 @@ rosservice call /set_pid "Ki: 0.0 Kp: 0.0 Kd: 0.0"
 ## Файл uvc\_camera.launch
 
 Файл для запуска издателя с данными полученными из фронтальной камеры. Подробнее о [работе с камерой](video.md#paket-uvc_camera)
+

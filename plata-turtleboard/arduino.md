@@ -4,7 +4,7 @@
 
 Для работы с МК необходимо скачать и запустить Arduino IDE с сайта arduino.cc. В настройках IDE выбрать плату Arduino Mega 2560.
 
-### Взаимодействие с ROS
+## Взаимодействие с ROS
 
 Arduino Mega подключена к Raspberry через порт Serial1. Со стороны ROS запущен сервис `rosserial` который организует взаимодействие МК и ROS.
 
@@ -24,11 +24,11 @@ ros::NodeHandle_<NewHardware>  nh;
 
 Остальные примеры можно взять из официальной документации [http://wiki.ros.org/rosserial\_arduino/Tutorials](http://wiki.ros.org/rosserial_arduino/Tutorials)
 
-### Библиотека Arduino ros\_lib
+## Библиотека Arduino ros\_lib
 
-Для работы с Arduino через ROS необходимо установить  библиотеку ros\_lib.
+Для работы с Arduino через ROS необходимо установить библиотеку ros\_lib.
 
-Скачать библиотеку:  [https://yadi.sk/d/BcI1126boKkf-A](https://yadi.sk/d/BcI1126boKkf-A)
+Скачать библиотеку: [https://yadi.sk/d/BcI1126boKkf-A](https://yadi.sk/d/BcI1126boKkf-A)
 
 Инструкция по установке библиотек для Arduino IDE [https://www.arduino.cc/en/guide/libraries](https://www.arduino.cc/en/guide/libraries#)
 
@@ -40,12 +40,13 @@ rosrun rosserial_arduino make_libraries.py .
 
 И далее переписать в директорию библиотек Arduino.
 
-### Дополнительные возможности Arduino
+## Дополнительные возможности Arduino
 
 В передней части системной платы робота расположены две кнопки, подключенные к контактам `D24` и `D23` МК Arduino. И два переключателя, подключенных к `D22` и `D25`. При нажатии кнопки или переключателя на пине Arduino будет сингал `HIGH` Для чтения значения необходимо использовать Arduino функцию `digitalRead(pin)`
 
 С левой стороны системной платы, находятся пины `D44 D45 D46`, которые возможно использовать для подключения серво машинок. Питание для сервоприводов 5v, с отдельной цепи питания.
 
-### Работа со светодиодной лентой
+## Работа со светодиодной лентой
 
 TODO
+

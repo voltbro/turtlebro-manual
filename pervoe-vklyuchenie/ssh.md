@@ -23,3 +23,4 @@ ssh pi@turtlebro20.local
 Администраторам системы необходимо настроить поддержку Multicast-DNS.
 
 Для доступа по SSH из **Windows** можно использовать программу [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+

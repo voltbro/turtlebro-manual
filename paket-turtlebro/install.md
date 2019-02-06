@@ -28,3 +28,4 @@ sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release 
 При сборке будут перезаписаны все файлы пакета в директорию /opt/ros/kinetic и все файлы управления systemd сервисами.
 
 Далее необходимо перезапустить сервис [turtlebro](../administrirovanie-ros/services.md)
+

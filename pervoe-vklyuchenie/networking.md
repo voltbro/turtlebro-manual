@@ -4,7 +4,25 @@
 
 Все роботы по умолчанию настроены для работы в WiFi и ethernet в режиме клиента, с получением настроек по DHCP.
 
-### Настройка подключения к WiFi
+## Настройка подключения к WiFi
+
+#### Подключение к точке WiFi по умолчанию
+
+По умолчанию при старте raspberry попытаеться подключиться к WiFi точке доступа с параметрами
+
+```text
+SSID: TurtleBro
+Pass: turtlew001
+```
+
+или
+
+```text
+SSID: TurtleBro5G
+Pass: turtlew001
+```
+
+
 
 **Настройка через Ethernet кабель**
 
@@ -14,7 +32,7 @@
 
 Определите IP адрес устройства
 
-Зайдите на ssh на устройство `ssh pi@IP`или `pi@turtlebroNNN.local`пароль `brobro`
+Зайдите на ssh на устройство `ssh pi@IP`или `pi@turtlebroNNN.local`[ Подключение по SSH](ssh.md)
 
 Откройте в редакторе файл
 
@@ -37,9 +55,9 @@ network={
 
 **Настройка через SD карту**
 
-При загрузке, если Raspberry найдет файл в разделе `/boot/wpa_supplicant.conf` то этот файл будет перемещен в `/etc/wpa_supplicant/wpa_supplicant.conf`
+Если при загрузке Raspberry найдет файл в разделе `/boot/wpa_supplicant.conf` то этот файл будет перемещен в `/etc/wpa_supplicant/wpa_supplicant.conf` 
 
-Подключить SD карту к компьютеру
+Подключить SD карту к персонаьному компьютеру
 
 Создать файл `/boot/wpa_supplicant.conf`с содержанием
 
@@ -58,9 +76,10 @@ network={
 
 **Внимание**, файл перезапишет все ваши текущие настройки WiFi в директории `/etc/wpa_supplicant`
 
-### Дополнительный команды WiFi
+## Дополнительный команды WiFi
 
 ```text
 sudo iwlist wlan0 scan | grep ESSID #сканирование сети
 sudo iwlist wlan0 freq  #доступные каналы wifi
 ```
+
