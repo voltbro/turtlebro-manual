@@ -30,7 +30,7 @@ Pass: turtlew001
 
 Подключите работающий Raspberry к Ethernet кабелю.
 
-Определите IP адрес устройства
+Определите IP адрес устройства, посмотрев его на роутере.
 
 Зайдите на ssh на устройство `ssh pi@IP`или `pi@turtlebroNNN.local`[ Подключение по SSH](ssh.md)
 
@@ -40,7 +40,7 @@ Pass: turtlew001
 sudo mcedit /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-В конец файла добавить настройки вида
+В конец файла добавить настройки WiFi сети
 
 ```text
 network={
