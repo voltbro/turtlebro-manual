@@ -1,6 +1,6 @@
-# Установка и обновлени
+# Установка и обновление
 
-Установить последнюю версию пакета `turtlebro` возможно из репозитория GitHub [https://github.com/voltbro/turtlebro](https://github.com/voltbro/turtlebro)
+Установить последнюю версию пакета `turtlebro` можно из репозитория GitHub [https://github.com/voltbro/turtlebro](https://github.com/voltbro/turtlebro)
 
 Пакет необходимо установить в директорию /home/pi/catcin\_ws/src/turtlebro
 

@@ -21,7 +21,7 @@
 ## Пакет turtlebro
 
 * [Описание](paket-turtlebro/about.md)
-* [Установка и обновлени](paket-turtlebro/install.md)
+* [Установка и обновление](paket-turtlebro/install.md)
 * [Параметры и настройка через launch](paket-turtlebro/params.md)
 * [Работа с камерой](paket-turtlebro/video.md)
 
@@ -30,3 +30,4 @@
 * [Доступные топики](plata-turtleboard/topics.md)
 * [Доступные cервисы](plata-turtleboard/services.md)
 * [Работа с Arduino](plata-turtleboard/arduino.md)
+
