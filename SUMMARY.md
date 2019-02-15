@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Инструкция робота TurtleBro](README.md)
+* [Безопасность](safety.md)
 
 ## Платформа TurtleBoard
 
