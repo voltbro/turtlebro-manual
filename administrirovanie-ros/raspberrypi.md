@@ -1,6 +1,6 @@
 # RaspberryPi
 
-Компьютеры raspberry, идущие в комплекте с роботами, поставляются с предустановленными ОС  
+Компьютеры Raspberry, идущие в комплекте с роботами, поставляются с предустановленными ОС  
 `Raspbian Stretch Lite` \([https://www.raspberrypi.org/downloads/raspbian/](https://www.raspberrypi.org/downloads/raspbian/)\) ,`ROS Kinetic Kane`  \([http://wiki.ros.org/kinetic](http://wiki.ros.org/kinetic)\) и всеми необходимыми системными пакетами. 
 
 Обновление образа ОС возможно через скачивание и полную перезапись SD карты. Для работы необходима карта размером **16Gb.** 
@@ -9,7 +9,7 @@
 
 * Raspberry 3 Model B
 * Raspberry 3 Model B+
-* * 
+
 ### Скачать образ
 
 Архив доступных образов: [https://yadi.sk/d/U0G80JoXs9eqcA](https://yadi.sk/d/U0G80JoXs9eqcA)
