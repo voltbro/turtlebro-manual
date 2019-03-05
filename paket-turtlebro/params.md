@@ -7,7 +7,7 @@
 * **stm\_serial\_node/pid** float\[3\] for Kp, Ki, Kd  -- ПИД регулятор для управления колесами робота
 * **stm\_serial\_node/wheel\_distance** double; meters -- расстояние между колесами
 * **stm\_serial\_node/wheel\_param** uint32\_t; number of ticks per meter -- расчетный коэффициент
-* **stm\_serial\_node/motor\_inversion** uint32\_t; 0/1 -- направления вращения колеса отнасительно направления робота
+* **stm\_serial\_node/motor\_inversion** uint32\_t; 0/1 -- направления вращения колес относительно направления робота
 * формула для расчета **wheel\_param**:
 
   **wheel\_param** = ticks\*red\_ratio/circle  
