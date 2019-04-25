@@ -7,6 +7,7 @@
 
 * [Сборка робота](platforma-turtleboard/assembly.md)
 * [Системная плата](platforma-turtleboard/board.md)
+* [Обновление микропрограммы](platforma-turtleboard/obnovlenie-mikroprogrammy.md)
 
 ## Первое включение
 

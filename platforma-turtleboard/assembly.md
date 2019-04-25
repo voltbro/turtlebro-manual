@@ -4,7 +4,7 @@
 
 ### Вид собранного робота
 
-![](../.gitbook/assets/img_0716.JPG)
+![](../.gitbook/assets/img_0716%20%281%29.JPG)
 
 ![](../.gitbook/assets/img_0719.JPG)
 
