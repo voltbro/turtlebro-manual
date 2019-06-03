@@ -49,7 +49,7 @@ network={
 }
 ```
 
-Обязательно наличие кавычек, если используется ключ wifi, а не passphrase
+При указании непосредственно паролья от wi-fi сети, обязательно наличие кавычек.
 
 Перезагрузите raspberry.
 
@@ -76,10 +76,18 @@ network={
 
 **Внимание**, файл перезапишет все ваши текущие настройки WiFi в директории `/etc/wpa_supplicant`
 
+## Генерация passphrase
+
+Если вы не хотите показывать ваш пароль для пользователей, вы можете сгенерировать специальный ключ `passphrase` и указать его в файле `wpa_supplicant.conf`. Пользователи не смогут "подсмотреть" пароль от wifi и подлкючать к сети свои устройства.
+
+Для генерации `passphrase` необходимо запустить программу `wpa_passphrase` далее указать имя WiFi сети и пароль. Далее вывод который покажет прогамма необходимо записать в файл `wpa_supplicant.conf` 
+
 ## Дополнительные команды WiFi
 
 ```text
 sudo iwlist wlan0 scan | grep ESSID #сканирование сети
 sudo iwlist wlan0 freq  #доступные каналы wifi
 ```
+
+Более подробно о настройке WiFi через командную строчку: [https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
 
