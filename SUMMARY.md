@@ -13,7 +13,7 @@
 
 * [Подключение к Сети](pervoe-vklyuchenie/networking.md)
 * [Подключение по SSH](pervoe-vklyuchenie/ssh.md)
-* [Подключение из ROS](pervoe-vklyuchenie/podklyuchenie-iz-ros.md)
+* [Подключение к ROS](pervoe-vklyuchenie/podklyuchenie-iz-ros.md)
 
 ## Администрирование ROS
 
