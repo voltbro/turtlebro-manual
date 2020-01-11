@@ -18,14 +18,14 @@ cd ~/ros_catkin_ws/src/turtlebro
 git pull
 ```
 
-После обновления необходимо произвести сборку пакета утилитой catkin\_make
+После обновления необходимо произвести сборку пакета `turtlebro` утилитой `catkin_make`
 
 ```text
 cd ~/ros_catkin_ws
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/kinetic --pkg=turtlebro
 ```
 
-При сборке будут перезаписаны все файлы пакета в директорию `/opt/ros/kinetic` и все файлы управления `systemd` сервисами.
+При сборке будут перезаписаны все файлы пакета в директорию `/opt/ros/melodic` и все файлы управления `systemd` сервисами.
 
 Далее необходимо остановить и запустить сервис [turtlebro](../administrirovanie-ros/services.md)
 
