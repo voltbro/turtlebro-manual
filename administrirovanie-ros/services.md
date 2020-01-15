@@ -7,7 +7,7 @@
 Запустить сборку пакета turtlebro на роботе вы можете коммандой 
 
 ```text
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/kinetic --pkg=turtlebro 
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic --pkg=turtlebro 
 ```
 
 Из директории `~/ros_catkin_ws` или запустить скрипт `./build.sh` в этой директории.
