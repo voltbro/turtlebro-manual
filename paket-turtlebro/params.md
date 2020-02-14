@@ -1,5 +1,25 @@
 # Параметры и настройка через launch
 
+## Загрузка робота
+
+После включения робота, происходит загрузка системы и автоматический запуск всех необходимых для работы робота нод. Управление нодами, которые будут загружены, возможно через .launch файл `/etc/ros/melodic/turtlebro.d/turtlebro.launch`
+
+По умолчанию запускаються ноды.
+
+`/arduino_serial_node   
+/robot_state_publisher   
+/rosout   
+/rplidarNode   
+/stm_serial_node`
+
+**Работают топики**
+
+`/bat /cmd_vel /diagnostics /imu /joint_states /odom /rosout /rosout_agg /scan /tf /tf_static /time_test`
+
+**Запущенны сервисы**
+
+`/arduino_serial_node/get_loggers /arduino_serial_node/set_logger_level /board_info /power/off /power/reset /reset /robot_state_publisher/get_loggers /robot_state_publisher/set_logger_level /rosout/get_loggers /rosout/set_logger_level /rplidarNode/get_loggers /rplidarNode/set_logger_level /set_pid /start_motor /stm_serial_node/get_loggers /stm_serial_node/set_logger_level /stop_motor`
+
 ## Параметры \(rosparams\)
 
 Устрановка параметров возможна через команду `rosparam set` или через `.launch` файлы

@@ -70,7 +70,11 @@ geometry_msgs/Vector3 linear_acceleration
 float64[9] linear_acceleration_covariance
 ```
 
-Данные о ковариации не заполняются.
+Данные о ковариации не заполняются. Данные публикуются с частотой 20 герц. Для подулючения визуализации в rviz на десктопе необходимо установить дополнительный плагин.
+
+`sudo apt install ros-melodic-rviz-imu-plugin`
+
+При добавление данных в rviz необходимо выбрать тип сообщения rviz\_imu\_plugin-&gt;Imu 
 
 ## Топик /odom
 
