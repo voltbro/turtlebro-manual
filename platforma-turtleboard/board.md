@@ -2,7 +2,9 @@
 
 ## Схема платы
 
-![](../.gitbook/assets/board-manual001.png)
+![&#x412;&#x438;&#x434; &#x441;&#x432;&#x435;&#x440;&#x445;&#x443;](../.gitbook/assets/board-manual.001.jpeg)
+
+![&#x412;&#x438;&#x434; &#x441;&#x43D;&#x438;&#x437;&#x443;](../.gitbook/assets/board-manual.002.jpeg)
 
 ### Назначение кнопок на плате
 
