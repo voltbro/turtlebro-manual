@@ -3,14 +3,9 @@
 * [Инструкция робота TurtleBro](README.md)
 * [Безопасность](safety.md)
 
-## Платформа TurtleBoard
-
-* [Сборка робота](platforma-turtleboard/assembly.md)
-* [Системная плата](platforma-turtleboard/board.md)
-* [Обновление микропрограммы](platforma-turtleboard/obnovlenie-mikroprogrammy.md)
-
 ## Первое включение
 
+* [Сборка робота](pervoe-vklyuchenie/assembly.md)
 * [Подключение робота к Сети](pervoe-vklyuchenie/networking.md)
 * [Подключение по SSH к роботу](pervoe-vklyuchenie/ssh.md)
 * [Подключение к ROS на роботе](pervoe-vklyuchenie/podklyuchenie-iz-ros.md)
@@ -28,6 +23,11 @@
 * [Установка и обновление](paket-turtlebro/install.md)
 * [Параметры и настройка через launch](paket-turtlebro/params.md)
 * [Работа с камерой](paket-turtlebro/video.md)
+
+## Платформа TurtleBoard
+
+* [Системная плата](platforma-turtleboard/board.md)
+* [Обновление микропрограммы](platforma-turtleboard/obnovlenie-mikroprogrammy.md)
 
 ## Плата TurtleBoard
 
