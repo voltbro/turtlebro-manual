@@ -9,10 +9,11 @@
 
 * Raspberry 3 Model B
 * Raspberry 3 Model B+
+* Raspberry 4
 
 ### Скачать образ
 
-Текущая версия прошивки: **turtlebro\_v0.4c\_8G.img.gz** Архив доступных образов: [https://yadi.sk/d/U0G80JoXs9eqcA](https://yadi.sk/d/U0G80JoXs9eqcA)
+Текущая версия прошивки: **turtlebro\_v0.4d.img.gz** Архив доступных образов: [https://yadi.sk/d/U0G80JoXs9eqcA](https://yadi.sk/d/U0G80JoXs9eqcA)
 
 ### Загрузка образа ОС на SD-карту
 
