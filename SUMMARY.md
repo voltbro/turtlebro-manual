@@ -9,6 +9,7 @@
 * [Подключение робота к Сети](pervoe-vklyuchenie/networking.md)
 * [Подключение по SSH к роботу](pervoe-vklyuchenie/ssh.md)
 * [Подключение к ROS на роботе](pervoe-vklyuchenie/podklyuchenie-iz-ros.md)
+* [Web интерфейс](pervoe-vklyuchenie/web-interfeis.md)
 
 ## Администрирование ROS
 
