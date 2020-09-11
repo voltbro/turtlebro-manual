@@ -13,7 +13,7 @@
 
 ### Скачать образ
 
-Текущая версия прошивки: **turtlebro\_v0.5.img.gz** Архив доступных образов: [https://yadi.sk/d/U0G80JoXs9eqcA](https://yadi.sk/d/U0G80JoXs9eqcA)
+Текущая версия прошивки: **turtlebro\_v0.6.img.gz** Архив доступных образов: [https://yadi.sk/d/U0G80JoXs9eqcA](https://yadi.sk/d/U0G80JoXs9eqcA)
 
 ### Загрузка образа ОС на SD-карту
 
