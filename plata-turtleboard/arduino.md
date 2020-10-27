@@ -56,3 +56,28 @@ ros::NodeHandle_<NewHardware>  nh;
 
 Под платой расположено 24 RGB светодиода модели WS2812. Для работы со светодиодной лентой используйте библиотеку FastLED [https://github.com/FastLED/FastLED](https://github.com/FastLED/FastLED) Управляющий пин для ленты `D30`.
 
+### **Удаленная загрузка скетча Arduino**
+
+Если есть необходимость удаленно \(без доступа к роботу\) обновить прошивку Arduino, то это возможно сделать имея только удаленный доступ.
+
+**Подготовить скетч к загрузке**
+
+1. В Arduino IDE выбрать МК Arduino/Genuino Mega or Mega 2560
+2. Скомпилировать программу \(кнопка Проверить\)
+3. В меню выбрать Скетч→Экспорт Бинарного файла
+4. В директории где находиться файл скетча, будут созданы два файла с бинарными данными вида \(sketch\_mar24a.ino.mega.hex sketch\_mar24a.ino.with\_bootloader.mega.hex\)
+5. Мы должны использовать файл `sketch_mar24a.ino.mega.hex`
+
+**Загрузить бинарный файл на Arduino:**
+
+1. Скопировать файлы `.hex` на робота, например командой linux scp
+2. На роботе выполнить команду "прошивки" платы Arduino 
+
+```c
+avrdude -v -v -p atmega2560 -c wiring -P /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0 -b 115200 -D -U flash:w:sketch_mar24a.ino.mega.hex:i
+```
+
+Где `sketch_mar24a.ino.mega.hex` имя файла с прошивкой.  
+  
+Для возможности удаленной прошивки платы, необходимо чтобы Arduino разъем на плате Turtlebro был подключен к RaspberryPi через Micro-USB.
+
