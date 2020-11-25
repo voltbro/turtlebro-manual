@@ -54,7 +54,17 @@ ros::NodeHandle_<NewHardware>  nh;
 
 ## Работа со светодиодной лентой
 
-Под платой расположено 24 RGB светодиода модели WS2812. Для работы со светодиодной лентой используйте библиотеку FastLED [https://github.com/FastLED/FastLED](https://github.com/FastLED/FastLED) Управляющий пин для ленты `D30`.
+Под платой расположено 24 RGB светодиода модели `WS2812`. Для работы со светодиодной лентой используйте библиотеку FastLED  
+[https://cdn-shop.adafruit.com/datasheets/WS2812.pdf](https://cdn-shop.adafruit.com/datasheets/WS2812.pdf)
+
+`WS2812` - это три RGB-светодиода  и микросхема-драйвер для управления этими светодиодами, собранные в одном SMD корпусе. Корпус каждого светодиода имеет 4 вывода: два вывода данных и два вывода питания.  Выводы данных  предыдущих светодиодов соединены со входами следующих, создавая цепочку светодиодов, управляемых через один пин микроконтроллера.
+
+Лента подключена к пину `D30` встроенного контроллера Аrduino. Число светодиодов - 24. Для управления светодиодами мы рекомендуем использовать библиотеку FastLed.  
+ [https://github.com/FastLED/FastLED](https://github.com/FastLED/FastLED)
+
+Пример управления светодиодной лентой из Аrduino-скетча:  
+[https://randomnerdtutorials.com/guide-for-ws2812b-addressable-rgb-led-strip-with-arduino/](https://randomnerdtutorials.com/guide-for-ws2812b-addressable-rgb-led-strip-with-arduino/)  
+[https://github.com/FastLED/FastLED/tree/master/examples](https://github.com/FastLED/FastLED/tree/master/examples)
 
 ## **Удаленная загрузка скетча Arduino**
 
