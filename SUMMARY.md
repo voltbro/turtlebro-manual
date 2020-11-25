@@ -35,4 +35,5 @@
 * [Доступные топики](plata-turtleboard/topics.md)
 * [Доступные cервисы](plata-turtleboard/services.md)
 * [Работа с Arduino](plata-turtleboard/arduino.md)
+* [Работа со светодиодной лентой](plata-turtleboard/rabota-so-svetodiodnoi-lentoi.md)
 
