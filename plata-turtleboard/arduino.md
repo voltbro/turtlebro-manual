@@ -66,7 +66,7 @@ ros::NodeHandle_<NewHardware>  nh;
 minicom -b 9600 -o -D /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0
 ```
 
-для завершения чтения следует нажать `Ctrl-A` и затем  X. Скорость и параметры подключения следует указать такими же, как при инициализации Serial в скетче Arduino.  
+для завершения чтения следует нажать `Ctrl-A` и затем  `X`. Скорость и параметры подключения следует указать такими же, как при инициализации Serial в скетче Arduino.  
 
 
 Еще одна возможность для получения данных от Arduino это применени библиотеки Serial языка Python[ https://pyserial.readthedocs.io/en/latest/shortintro.html](https://pyserial.readthedocs.io/en/latest/shortintro.html)
