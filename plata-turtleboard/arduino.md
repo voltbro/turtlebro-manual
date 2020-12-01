@@ -52,6 +52,40 @@ ros::NodeHandle_<NewHardware>  nh;
 
 Перед лидаром расположены 4 светодиода, подключенные к пинам `D26, D27, D28, D29.`
 
+## Общение с Arduino через Serial
+
+{% hint style="info" %}
+**Внимание!** Для прямого общения с Arduino необходимо соединить usb-порт Raspberry и microusb порт контроллера кабелем.
+{% endhint %}
+
+  
+В некоторых случаях необходимо получать данные от встроенного микроконтроллера без применения ROS. Для этого можно применять консольные утилиты типа minicom \([https://linux.die.net/man/1/minicom](https://linux.die.net/man/1/minicom)\).  
+Для чтения данных от ардуины можно применить следующую команду:
+
+```text
+minicom -b 9600 -o -D /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0
+```
+
+для завершения чтения следует нажать `Ctrl-A` и затем  X. Скорость и параметры подключения следует указать такими же, как при инициализации Serial в скетче Arduino.  
+
+
+Еще одна возможность для получения данных от Arduino это применени библиотеки Serial языка Python[ https://pyserial.readthedocs.io/en/latest/shortintro.html](https://pyserial.readthedocs.io/en/latest/shortintro.html)
+
+Пример простого скрипта для чения данных от Arduino:
+
+```c
+#!/usr/bin/env python3
+
+import serial
+if __name__ == '__main__':
+    ser = serial.Serial('/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0', 9600, timeout=1)
+    ser.flush()
+    while True:
+        if ser.in_waiting > 0:
+            line = ser.readline().decode('utf-8').rstrip()
+            print(line)
+```
+
 ## Работа со светодиодной лентой
 
 Под платой расположено 24 RGB светодиода модели `WS2812`.   
