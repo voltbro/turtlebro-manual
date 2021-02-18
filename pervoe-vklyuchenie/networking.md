@@ -53,7 +53,9 @@ network={
 
 ## **Настройка подключения к новой WiFi через SD карту**
 
-Если на этапе загрузки Raspberry найдет файл `wpa_supplicant.conf` в папке `/boot/` то этот файл будет перемещен в `/etc/wpa_supplicant/wpa_supplicant.conf` и таким образом станет конфиграционным файлом подключения к Wi-Fi сетям.
+На sd-карте, содержащей готовый образ системы для запуска на роботе есть, два раздела разного размера. Обычно они называются `system` и `boot`, но иногда система может назвать их по-другому при подключении к пк. Раздел `system` содержит стандартный набор директорий файловой системы Linux и занимает основной объем sd-карты. \(подробнее - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)\)   
+Раздел  `boot`небольшой и содержит настройки запуска Raspberry. \(Подробнее - [https://www.raspberrypi.org/documentation/configuration/boot\_folder.md](https://www.raspberrypi.org/documentation/configuration/boot_folder.md)\)   
+Если на этапе загрузки Raspberry найдет файл `wpa_supplicant.conf` в разделе `boot` то этот файл будет перемещен в `/etc/wpa_supplicant/wpa_supplicant.conf` и таким образом станет конфиграционным файлом подключения к Wi-Fi сетям.
 
 Чтобы сконфигурировать Raspberry в этом режиме подключите SD карту Raspberry к вашему компьютеру.
 
