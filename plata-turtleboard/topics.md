@@ -131,3 +131,18 @@ float32[] ranges
 float32[] intensities
 ```
 
+## Топик /raw\_odom
+
+Для версии прошивки 1.12+
+
+Данные полученные энкодеров колес. Время, счетчик "тиков" и угол датчика IMU
+
+```text
+turtlebro/RawOdom
+
+uint64 timestamp
+int32 left_ticks
+int32 right_ticks
+float32 theta
+```
+
