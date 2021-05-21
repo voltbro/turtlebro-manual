@@ -11,6 +11,7 @@
 * [Подключение по SSH к роботу](pervoe-vklyuchenie/ssh.md)
 * [Подключение к ROS на роботе](pervoe-vklyuchenie/podklyuchenie-iz-ros.md)
 * [Web интерфейс](pervoe-vklyuchenie/web-interfeis.md)
+* [Выключение робота](pervoe-vklyuchenie/turn-off-robot.md)
 
 ## Администрирование ROS
 
