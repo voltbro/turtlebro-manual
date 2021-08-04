@@ -22,7 +22,7 @@
 
 ## Параметры \(rosparams\)
 
-Устрановка параметров возможна через команду `rosparam set` или через `.launch` файлы
+Установка параметров возможна через команду `rosparam set` или через `.launch` файлы
 
 * **stm\_serial\_node/pid** float\[3\] for Kp, Ki, Kd  -- ПИД регулятор для управления колесами робота
 * **stm\_serial\_node/wheel\_distance** double; meters -- расстояние между колесами
