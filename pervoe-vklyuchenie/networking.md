@@ -53,7 +53,7 @@ network={
 
 ## **Настройка подключения к новой WiFi через SD карту**
 
-На SD карте, содержащей готовый образ системы для запуска на роботе, есть два раздела разного размера. Обычно они называются `system` и `boot`, но иногда система может назвать их по-другому при подключении к пк. Раздел `system` содержит стандартный набор директорий файловой системы Linux и занимает основной объем SD карты \(подробнее - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)\).   
+На SD карте, содержащей готовый образ системы для запуска на роботе, есть два раздела разного размера. Обычно они называются `system` и `boot`, но иногда система может назвать их по-другому при подключении к компьютеру. Раздел `system` содержит стандартный набор директорий файловой системы Linux и занимает основной объем SD карты \(подробнее - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)\).   
 Раздел `boot`небольшой и содержит настройки запуска Raspberry \(подробнее - [https://www.raspberrypi.org/documentation/configuration/boot\_folder.md](https://www.raspberrypi.org/documentation/configuration/boot_folder.md)\)   
 Если на этапе загрузки Raspberry найдет файл `wpa_supplicant.conf` в разделе `boot` то этот файл будет перемещен в `/etc/wpa_supplicant/wpa_supplicant.conf` и таким образом станет конфиграционным файлом подключения к Wi-Fi сетям.
 
