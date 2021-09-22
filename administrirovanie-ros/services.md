@@ -7,10 +7,10 @@
 Запустить сборку пакета turtlebro на роботе вы можете командой 
 
 ```text
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic --pkg=turtlebro 
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=turtlebro
 ```
 
-Из директории `~/ros_catkin_ws` или запустить скрипт `./build.sh` в этой директории.
+Из директории `~/ros_catkin_ws` или запустить скрипт `./build_turtlebro.sh` в этой директории.
 
 Сборкой пакета называют выполнение ряда операций над пакетом \(компиляция бинарный файлов, копирование  необходимых файлов в системные папки\).
 

@@ -111,6 +111,18 @@ geometry_msgs/TwistWithCovariance twist
   float64[36] covariance
 ```
 
+## Топик /odom\_pose2d
+
+Упрощенные данные одометрии в 2d пространстве
+
+```text
+float64 x
+float64 y
+float64 theta
+```
+
+
+
 ## Топик /scan
 
 Данные, полученные с лидара \(облако точек\). Данные идут через Serial интерфейс лидара, USB-UART преобразователь и через USB hub. Тип сообщения `sensor_msgs/LaserScan` .
@@ -132,8 +144,6 @@ float32[] intensities
 ```
 
 ## Топик /raw\_odom
-
-Для версии прошивки 1.12+
 
 Данные полученные энкодеров колес. Время, счетчик "тиков" и угол датчика IMU
 

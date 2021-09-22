@@ -2,32 +2,33 @@
 
 ## Загрузка робота
 
-После включения робота, происходит загрузка системы и автоматический запуск всех необходимых для работы робота нод. Управление нодами, которые будут загружены, возможно через .launch файл `/etc/ros/melodic/turtlebro.d/turtlebro.launch`
+После включения робота, происходит загрузка системы и автоматический запуск всех необходимых для работы робота нод. Управление нодами, которые будут загружены, возможно через .launch файл `/etc/ros/noetic/turtlebro.d/turtlebro.launch`
 
 **По умолчанию запускаются ноды.**
 
 `/arduino_serial_node   
 /robot_state_publisher   
-/rosout   
+/rosout  
+/simple_odom   
 /rplidarNode   
-/stm_serial_node`
+/stm_serial_node  
+/webserver  
+/web_telemetry_node`
 
 **Работают топики**
 
-`/bat /cmd_vel /diagnostics /imu /joint_states /odom /rosout /rosout_agg /scan /tf /tf_static /time_test`
+`/bat /client_count /cmd_vel /connected_clients /diagnostics /imu /joint_states /odom /odom_pose2d /raw_odom /rosout /rosout_agg /scan /tf /tf_static /web_tele`
 
 **Запущены сервисы**
 
-`/arduino_serial_node/get_loggers /arduino_serial_node/set_logger_level /board_info /power/off /power/reset /reset /robot_state_publisher/get_loggers /robot_state_publisher/set_logger_level /rosout/get_loggers /rosout/set_logger_level /rplidarNode/get_loggers /rplidarNode/set_logger_level /set_pid /start_motor /stm_serial_node/get_loggers /stm_serial_node/set_logger_level /stop_motor`
+`/arduino_serial_node/get_loggers /arduino_serial_node/set_logger_level /board_info /power/off /power/reset /reset /robot_state_publisher/get_loggers /robot_state_publisher/set_logger_level /rosapi/action_servers /rosapi/delete_param /rosapi/get_loggers /rosapi/get_param /rosapi/get_param_names /rosapi/get_time /rosapi/has_param /rosapi/message_details /rosapi/node_details /rosapi/nodes /rosapi/publishers /rosapi/search_param /rosapi/service_host /rosapi/service_node /rosapi/service_providers /rosapi/service_request_details /rosapi/service_response_details /rosapi/service_type /rosapi/services /rosapi/services_for_type /rosapi/set_logger_level /rosapi/set_param /rosapi/subscribers /rosapi/topic_type /rosapi/topics /rosapi/topics_and_raw_types /rosapi/topics_for_type /rosbridge_websocket/get_loggers /rosbridge_websocket/set_logger_level /rosout/get_loggers /rosout/set_logger_level /rplidarNode/get_loggers /rplidarNode/set_logger_level /set_pid /simple_odom/get_loggers /simple_odom/set_logger_level /start_motor /stm_serial_node/get_loggers /stm_serial_node/set_logger_level /stop_motor /web_telemetry_node/get_loggers /web_telemetry_node/set_logger_level /webserver/get_loggers /webserver/set_logger_level`
 
 ## Параметры \(rosparams\)
 
 Установка параметров возможна через команду `rosparam set` или через `.launch` файлы
 
-* **stm\_serial\_node/pid** float\[3\] for Kp, Ki, Kd  -- ПИД регулятор для управления колесами робота
 * **stm\_serial\_node/wheel\_distance** double; meters -- расстояние между колесами
 * **stm\_serial\_node/wheel\_param** uint32\_t; number of ticks per meter -- расчетный коэффициент
-* **stm\_serial\_node/motor\_inversion** uint32\_t; 0/1 -- направления вращения колес относительно направления робота
 * формула для расчета **wheel\_param**:
 
   **wheel\_param** = ticks\*red\_ratio/circle  
@@ -42,6 +43,20 @@
 В случае, когда пользователь не установил никаких параметров, происходит загрузка TurtleBoard с параметрами по умолчанию, которые обеспечивают работу идущих в комплекте с роботом моторов и колес. Процедура обновления параметров нужна только в том случае, когда плата TurtleBoard настраивается для работы с нестандартным шасси.   
   
 Загруженные параметры не сохраняются в постоянную память контроллера, поэтому при установке неправильных параметров необходимо произвести перезапуск устройства, чтобы загрузить значения по умолчанию.
+
+### Настрока параметров в файле .ros\_params
+
+Файл `/home/pi/.ros_params` содержит парамметры окружения для старта ROS
+
+```text
+export ROS_HOSTNAME=$machine_ip
+export ROS_IP=$machine_ip
+export ROS_MASTER_URI=http://$machine_ip:11311
+export ROVER_MODEL=turtlebro
+#export ROVER_WHEEL_PARAM=12280
+```
+
+Переменная окружения ROVER\_WHEEL\_PARAM определяет параметр **wheel\_param** для определения типа моторов. Для старых моторов применяеться значение по умолчан 22500 для новых моторов 12280. Если одометрия робота не совпадает, необходимо провести калибровку параметра.
 
 ### Настройка ПИД параметров моторов
 
@@ -58,16 +73,17 @@ rosservice call /set_pid "Ki: 0.0 Kp: 0.0 Kd: 0.0"
 ```text
 <arg name="run_rosserial" default="true"/>
 <arg name="run_rplidar" default="true"/>
-<arg name="run_uvc_camera" default="false"/>
-<arg name="run_slam_gmapping" default="false"/>
+<arg name="run_turtlebro_web" default="true"/>
+<arg name="run_camera_ros" default="false"/>
+<arg name="run_simple_odom" default="true"/>
 ```
 
 `run_rosserial` -- запуск rosserial.launch для соединения с Arduino и STM МК  
 `run_rplidar` -- запустить получение данные с RPLidar
 
-`run_uvc_camera` -- включить камеру через пакет uvc\_camera
+`run_camera_ros` -- включить камеру через пакет `uvc_camera`
 
-`run_slam_gmapping` -- включить работу робота в режиме SLAM
+`run_simple_odom` -- подключить паблишер приведенной одометрии `/odom_pose2d`
 
 ## Файл rosserial.launch
 
@@ -87,7 +103,7 @@ rosservice call /set_pid "Ki: 0.0 Kp: 0.0 Kd: 0.0"
 
 Данные с лидара вычисляются относительно фрейма `base_scan`
 
-## Файл uvc\_camera.launch
+## Файл camera\_ros.launch
 
 Файл для запуска издателя с данными полученными из фронтальной камеры. Подробнее о [работе с камерой](video.md#paket-uvc_camera)
 

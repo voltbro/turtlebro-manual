@@ -17,7 +17,6 @@
 
 * [RaspberryPi](administrirovanie-ros/raspberrypi.md)
 * [Сервисы TurtleBro](administrirovanie-ros/services.md)
-* [Полезные ссылки](administrirovanie-ros/poleznye-ssylki.md)
 * [Сборка пакетов ROS](administrirovanie-ros/sborka-paketov-ros.md)
 
 ## Пакет turtlebro

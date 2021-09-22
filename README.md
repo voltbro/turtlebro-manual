@@ -8,3 +8,9 @@
 
 Робот разработан и поддерживается проектом "[БратьяВольт](http://www.voltbro.ru)"
 
+{% hint style="warning" %}
+Архив документации для ROS melodic и python2 
+
+[http://archive.turtlebro.ru/manual/melodic/](http://archive.turtlebro.ru/manual/melodic/)
+{% endhint %}
+

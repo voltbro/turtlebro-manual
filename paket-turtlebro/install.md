@@ -22,10 +22,10 @@ git pull
 
 ```text
 cd ~/ros_catkin_ws
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic --pkg=turtlebro
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=turtlebro
 ```
 
-При сборке будут перезаписаны все файлы пакета в директорию `/opt/ros/melodic` и все файлы управления `systemd` сервисами.
+При сборке будут перезаписаны все файлы пакета в директорию `/opt/ros/noetic` и все файлы управления `systemd` сервисами.
 
 Далее необходимо остановить и запустить сервис [turtlebro](../administrirovanie-ros/services.md)
 

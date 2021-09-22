@@ -27,17 +27,16 @@ sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release 
 Установка пакета `new_pack` из дистрибутива пакетов ROS
 
 ```text
-rosinstall_generator new_pack --rosdistro melodic --deps --wet-only --tar > new_pack.rosinstall
-wstool merge -t src new_pack.rosinstall
-wstool update -t src
-rosdep install -y --from-paths src --ignore-src --rosdistro melodic -r --os=debian:buster
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic
+rosinstall_generator new_pack --rosdistro noetic --deps --tar > new_pack.rosinstall
+vcs import src < new_pack.rosinstall
+rosdep install --from-paths ./src --ignore-packages-from-source --rosdistro noetic -y
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=new_pack
 ```
 
 Если пакет не имеет зависимостей, то его можно собрать без пересборки всего ROS.
 
 ```text
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic --pkg=new_pack
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=new_pack
 ```
 
 #### Установка пакета из исходных кодов
@@ -49,7 +48,7 @@ sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release 
 Собрать и установить пакет
 
 ```text
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic --pkg=new_pack
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=new_pack
 ```
 
 
