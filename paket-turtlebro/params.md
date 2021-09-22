@@ -23,6 +23,22 @@
 
 `/arduino_serial_node/get_loggers /arduino_serial_node/set_logger_level /board_info /power/off /power/reset /reset /robot_state_publisher/get_loggers /robot_state_publisher/set_logger_level /rosapi/action_servers /rosapi/delete_param /rosapi/get_loggers /rosapi/get_param /rosapi/get_param_names /rosapi/get_time /rosapi/has_param /rosapi/message_details /rosapi/node_details /rosapi/nodes /rosapi/publishers /rosapi/search_param /rosapi/service_host /rosapi/service_node /rosapi/service_providers /rosapi/service_request_details /rosapi/service_response_details /rosapi/service_type /rosapi/services /rosapi/services_for_type /rosapi/set_logger_level /rosapi/set_param /rosapi/subscribers /rosapi/topic_type /rosapi/topics /rosapi/topics_and_raw_types /rosapi/topics_for_type /rosbridge_websocket/get_loggers /rosbridge_websocket/set_logger_level /rosout/get_loggers /rosout/set_logger_level /rplidarNode/get_loggers /rplidarNode/set_logger_level /set_pid /simple_odom/get_loggers /simple_odom/set_logger_level /start_motor /stm_serial_node/get_loggers /stm_serial_node/set_logger_level /stop_motor /web_telemetry_node/get_loggers /web_telemetry_node/set_logger_level /webserver/get_loggers /webserver/set_logger_level`
 
+## Настрока параметров запуска
+
+### Настройка параметров в файле .ros\_params
+
+Файл `/home/pi/.ros_params` содержит парамметры окружения для старта ROS
+
+```text
+export ROS_HOSTNAME=$machine_ip
+export ROS_IP=$machine_ip
+export ROS_MASTER_URI=http://$machine_ip:11311
+export ROVER_MODEL=turtlebro
+#export ROVER_WHEEL_PARAM=12280
+```
+
+Переменная окружения ROVER\_WHEEL\_PARAM определяет параметр **wheel\_param** для определения типа моторов. Для старых моторов применяеться значение по умолчан 22500 для новых моторов 12280. Если одометрия робота не совпадает, необходимо провести калибровку параметра.
+
 ## Параметры \(rosparams\)
 
 Установка параметров возможна через команду `rosparam set` или через `.launch` файлы
@@ -44,19 +60,7 @@
   
 Загруженные параметры не сохраняются в постоянную память контроллера, поэтому при установке неправильных параметров необходимо произвести перезапуск устройства, чтобы загрузить значения по умолчанию.
 
-### Настрока параметров в файле .ros\_params
 
-Файл `/home/pi/.ros_params` содержит парамметры окружения для старта ROS
-
-```text
-export ROS_HOSTNAME=$machine_ip
-export ROS_IP=$machine_ip
-export ROS_MASTER_URI=http://$machine_ip:11311
-export ROVER_MODEL=turtlebro
-#export ROVER_WHEEL_PARAM=12280
-```
-
-Переменная окружения ROVER\_WHEEL\_PARAM определяет параметр **wheel\_param** для определения типа моторов. Для старых моторов применяеться значение по умолчан 22500 для новых моторов 12280. Если одометрия робота не совпадает, необходимо провести калибровку параметра.
 
 ### Настройка ПИД параметров моторов
 
