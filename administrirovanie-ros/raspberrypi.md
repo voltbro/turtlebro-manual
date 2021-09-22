@@ -1,7 +1,7 @@
 # RaspberryPi
 
 Компьютеры Raspberry, идущие в комплекте с роботами, поставляются с предустановленными ОС  
-`Raspbian Buster Lite` \([https://www.raspberrypi.org/downloads/raspbian/](https://www.raspberrypi.org/downloads/raspbian/)\) ,`ROS Melodic`   и всеми необходимыми системными пакетами. 
+`Raspbian Buster Lite` \([https://www.raspberrypi.org/downloads/raspbian/](https://www.raspberrypi.org/downloads/raspbian/)\) ,`ROS Noetic`   и всеми необходимыми системными пакетами. 
 
 Обновление образа ОС возможно через скачивание и полную перезапись SD карты. Для работы необходима карта размером **16Gb.** 
 
