@@ -14,7 +14,7 @@
 cd catkin_ws/src
 git clone repo_name
 cd ../
-catkin_make --pkg=repo_name
+catkin_make --pkg repo_name
 ```
 
 ### Обновление системных пакетов
