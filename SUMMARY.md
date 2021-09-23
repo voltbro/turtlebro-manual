@@ -3,6 +3,7 @@
 * [Инструкция робота TurtleBro](README.md)
 * [Безопасность](safety.md)
 * [Полезные ссылки](links.md)
+* [Обновление платформы](obnovlenie-platformy.md)
 
 ## Первое включение
 
