@@ -7,22 +7,22 @@
 Скачать пакет \(если пакет не был установлен\)
 
 ```text
-cd ~/ros_catkin_ws/src/
+cd ~/catkin_ws/src/
 git clone https://github.com/voltbro/turtlebro
 ```
 
 Обновить пакет \(если пакет был установлен через git\)
 
 ```text
-cd ~/ros_catkin_ws/src/turtlebro
+cd ~/catkin_ws/src/turtlebro
 git pull
 ```
 
 После обновления необходимо произвести сборку пакета `turtlebro` утилитой `catkin_make`
 
 ```text
-cd ~/ros_catkin_ws
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=turtlebro
+cd ~/catkin_ws
+catkin_make --pkg turtlebro
 ```
 
 При сборке будут перезаписаны все файлы пакета в директорию `/opt/ros/noetic` и все файлы управления `systemd` сервисами.
