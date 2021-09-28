@@ -2,9 +2,9 @@
 
 ## Рабочее окружение 
 
-На роботе созданны две директории с пакетами ROS, `catkin_ws` для пользовательский пакетов и `ros_catkin_ws` для системных пакетов.
+На роботе создано два рабочих окружения  для ROS пакетов. Директория `catkin_ws` для пользовательский пакетов и `ros_catkin_ws` для системных пакетов. 
 
-#### Установка пакетов в пользовательскую директорию `catkin_ws`
+#### Пользовательсвое окружение в директории `catkin_ws`
 
 Рекомендуется все новые и пользовательские пакеты устанавливать а директорию `catkin_ws/src`
 
@@ -17,13 +17,15 @@ cd ../
 catkin_make --pkg repo_name
 ```
 
+При работе в директории `catkin_ws` ROS искользует исходники сразу из этой директории. Поэтому например при изменении .launch файло, дополнительно собирать пакеты не нужно. Такой подход упрощаяет тестированеи и разработку.
+
 ### Обновление системных пакетов
 
-Системные пакеты ROS на роботе установлены из исходных кодов, а не загружены при помощи пакетного менеджера `apt` Таким образом, для обновления старых и установки новых пакетов надо научится собирать их из исходных кодов.
+Системные пакеты ROS  установлены из исходных кодов, а не загружены при помощи пакетного менеджера `apt` Таким образом, для обновления старых системных пакетов и установки новых необходимо собирать пакеты из исходных кодов.
 
-#### Сборка дистрибутива
+#### Сборка дистрибутива ROS
 
-Все команды выполняются в директории основного "воркспейса" ROS `/home/pi/ros_catkin_ws`
+Все команды выполняются в директории основного окружени ROS `/home/pi/ros_catkin_ws`
 
 Пересобрать все системные пакеты ROS
 
@@ -31,7 +33,9 @@ catkin_make --pkg repo_name
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3
 ```
 
-Пересобрать один конкретный пакет можно командой: 
+Все системные пакеты после сборки будут остановленны в директорию `/opt/ros/noetic`
+
+Собрать один конкретный пакет можно командой: 
 
 ```text
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=pkg_name
@@ -52,7 +56,7 @@ rosdep install --from-paths ./src --ignore-packages-from-source --rosdistro noet
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=new_pack
 ```
 
-Если пакет не имеет зависимостей, то его можно собрать без пересборки всего ROS.
+Если пакет не имеет зависимостей, то его можно собрать без сборки всего ROS.
 
 ```text
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -DPYTHON_EXECUTABLE=/usr/bin/python3 --pkg=new_pack

@@ -1,4 +1,4 @@
-# Установка и обновление
+# Установка и обновление пакетов
 
 Установить последнюю версию пакета `turtlebro` можно из репозитория GitHub [https://github.com/voltbro/turtlebro](https://github.com/voltbro/turtlebro)
 
