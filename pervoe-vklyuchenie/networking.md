@@ -10,14 +10,14 @@
 
 По умолчанию при старте raspberry попытается подключиться к WiFi точке доступа с параметрами
 
-```text
+```
 SSID: TurtleBro
 Pass: turtlew001
 ```
 
 или
 
-```text
+```
 SSID: TurtleBro5G
 Pass: turtlew001
 ```
@@ -34,13 +34,13 @@ Pass: turtlew001
 
 Откройте в редакторе `mcedit` файл `wpa_supplicant.conf`
 
-```text
+```
 sudo mcedit /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 В конец файла добавьте настройки WiFi вашей сети в виде:
 
-```text
+```
 network={
     ssid="WIFI_NETWORK_NAME"
     psk="wifipassword"
@@ -53,19 +53,19 @@ network={
 
 ## **Настройка подключения к новой WiFi через SD карту**
 
-На SD карте, содержащей готовый образ системы для запуска на роботе, есть два раздела разного размера. Обычно они называются `system` и `boot`, но иногда система может назвать их по-другому при подключении к компьютеру. 
+На SD карте, содержащей готовый образ системы для запуска на роботе, есть два раздела разного размера. Обычно они называются `system` и `boot`, но иногда система может назвать их по-другому при подключении к компьютеру.&#x20;
 
-Раздел `system` содержит стандартный набор директорий файловой системы Linux и занимает основной объем SD карты \(подробнее - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)\).   
+Раздел `system` содержит стандартный набор директорий файловой системы Linux и занимает основной объем SD карты (подробнее - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)). \
 
 
-Раздел `boot`небольшой и содержит настройки запуска Raspberry \(подробнее - [https://www.raspberrypi.org/documentation/configuration/boot\_folder.md](https://www.raspberrypi.org/documentation/configuration/boot_folder.md)\)   
+Раздел `boot`небольшой и содержит настройки запуска Raspberry (подробнее - [https://www.raspberrypi.org/documentation/configuration/boot\_folder.md](https://www.raspberrypi.org/documentation/configuration/boot\_folder.md)) \
 Если на этапе загрузки Raspberry найдет файл `wpa_supplicant.conf` в разделе `boot` то этот файл будет перемещен в `/etc/wpa_supplicant/wpa_supplicant.conf` и таким образом станет конфиграционным файлом подключения к Wi-Fi сетям.
 
 Чтобы сконфигурировать Raspberry в этом режиме подключите SD карту Raspberry к вашему компьютеру.
 
 Создайте на SD карте файл `/boot/wpa_supplicant.conf`с содержанием:
 
-```text
+```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 country=US
@@ -80,7 +80,7 @@ network={
 
 Сохраните файл.
 
-Установите SD карту в Raspberry и дождитесь завершения загрузки. 
+Установите SD карту в Raspberry и дождитесь завершения загрузки.&#x20;
 
 {% hint style="danger" %}
 **Внимание**, файл перезапишет все ваши текущие настройки WiFi в директории `/etc/wpa_supplicant`
@@ -94,10 +94,9 @@ network={
 
 ## Дополнительные команды WiFi
 
-```text
+```
 sudo iwlist wlan0 scan | grep ESSID #сканирование сети
 sudo iwlist wlan0 freq  #доступные каналы wifi
 ```
 
 Более подробно о настройке WiFi через командную строку: [https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
-

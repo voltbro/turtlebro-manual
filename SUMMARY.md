@@ -3,7 +3,8 @@
 * [Инструкция робота TurtleBro](README.md)
 * [Безопасность](safety.md)
 * [Полезные ссылки](links.md)
-* [Обновление платформы](install_noetic.md)
+* [Обновление платформы](install\_noetic.md)
+* [Обновление колесной базы](obnovlenie-kolesnoi-bazy.md)
 
 ## Первое включение
 
@@ -37,4 +38,3 @@
 * [Доступные топики](plata-turtleboard/topics.md)
 * [Доступные cервисы](plata-turtleboard/services.md)
 * [Работа с Arduino](plata-turtleboard/arduino.md)
-
