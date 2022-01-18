@@ -31,7 +31,9 @@
 ## Платформа TurtleBoard
 
 * [Системная плата](platforma-turtleboard/board.md)
-* [Обновление микропрограммы](platforma-turtleboard/obnovlenie-mikroprogrammy.md)
+* [Обновление микропрограммы](platforma-turtleboard/obnovlenie-mikroprogrammy/README.md)
+  * [Обновление микропрограммы с помощью USB-UART переходника](platforma-turtleboard/obnovlenie-mikroprogrammy/obnovlenie-mikroprogrammy.md)
+  * [Обновление микропрограммы с помощью программатора ST-LINK V2](platforma-turtleboard/obnovlenie-mikroprogrammy/obnovlenie-mikroprogrammy-s-pomoshyu-programmatora-st-link-v2.md)
 
 ## Плата TurtleBoard
 
