@@ -6,7 +6,7 @@ description: >-
 
 # Обновление микропрограммы с помощью USB-UART переходника
 
-Для обновления микропрограммы системной платы TurtleBoard необходимо использовать USB-UART переходник и программу [STM32 Flash loader demonstrator](https://yadi.sk/d/lfNmZ8NGI7\_0UQ).&#x20;
+Для обновления микропрограммы системной платы TurtleBoard необходимо использовать программу [STM32 Flash loader demonstrator](https://yadi.sk/d/lfNmZ8NGI7\_0UQ).&#x20;
 
 Придерживайтесь следующей инструкции:
 
