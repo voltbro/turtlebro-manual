@@ -58,7 +58,10 @@ network={
 Раздел `system` содержит стандартный набор директорий файловой системы Linux и занимает основной объем SD карты (подробнее - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)). \
 
 
-Раздел `boot`небольшой и содержит настройки запуска Raspberry (подробнее - [https://www.raspberrypi.org/documentation/configuration/boot\_folder.md](https://www.raspberrypi.org/documentation/configuration/boot\_folder.md)) \
+Раздел `boot`небольшой и содержит настройки запуска Raspberry (подробнее - [https://www.raspberrypi.org/documentation/configuration/boot\_folder.md](https://www.raspberrypi.org/documentation/configuration/boot\_folder.md))&#x20;
+
+![](<../.gitbook/assets/Screenshot from 2022-02-08 16-22-24.png>)
+
 Если на этапе загрузки Raspberry найдет файл `wpa_supplicant.conf` в разделе `boot` то этот файл будет перемещен в `/etc/wpa_supplicant/wpa_supplicant.conf` и таким образом станет конфиграционным файлом подключения к Wi-Fi сетям.
 
 Чтобы сконфигурировать Raspberry в этом режиме подключите SD карту Raspberry к вашему компьютеру.
