@@ -26,8 +26,8 @@
 * [Описание](paket-turtlebro/about.md)
 * [Установка и обновление пакетов](paket-turtlebro/install.md)
 * [Параметры и настройка через launch](paket-turtlebro/params.md)
-* [Работа с камерой](paket-turtlebro/video.md)
-* [Работа с камерой (v0.10)](paket-turtlebro/video-new.md)
+* [Работа с камерой](<paket-turtlebro/video (1).md>)
+* [Работа с камерой (v0.10)](paket-turtlebro/video.md)
 
 ## Платформа TurtleBoard
 

@@ -1,41 +1,78 @@
-# Работа с камерой
+# Работа с камерой (v0.10)
 
-При включении робота автоматический стартует вещание видео необходимое для работы web интерфейса. Для этого используется `launch` файл `camera_stream.launch`, который запускает ROS ноду `mjpg_camera`
+{% hint style="info" %}
+Актуально для версии 0.10 и более новых
+{% endhint %}
 
-Web интерфейс для просмотра видео и управления роботом доступен на URL `http://192.168.0.100:8080` где `192.168.0.100` IP вашего робота. Данный способ работы с камерой не создает ROS топика с данными камеры. Но его удобно использовать для работы с камерой в браузере, без дополнительных настроек.
-
-#### Работа с камерой через ROS
-
-Если вам необходимо получить данные из камеры в ROS, то вам необходимо поменять запускаемый `launch` файл для работы с пакетом `uvc_camera.`
-
-Для запуска ноды `uvc_camera` необходимо использовать файл `camera_ros.launch`
-
-Две ноды не могут одновременно работать с камерой, поэтому необходимо переконфигурировать файл запуска `/etc/ros/turtlebro.d/turtlebro.launch` в части:
+При включении робота автоматический включается камера `video0` и начитают публиковаться данные в топики камеры
 
 ```
-<arg name="run_turtlebro_web" default="true"/>
-<arg name="run_camera_ros" default="false"/>
+/front_camera/camera_info # Информация о камере
+/front_camera/image_raw  # Данные в формате sensor_msgs/Image (.jpeg)
+/front_camera/image_raw/compressed sensor_msgs/CompressedImage (RAW_
 ```
 
-Выключить веб интерфейс `run_turtlebro_web` и включить `run_camera_ros`
+Данные c камеры принимаются в формате `mjpeg` и без дополнительной обработки публикуються в топик `/front_camera/image_raw/compressed` Для заполнения топика `/front_camera/image_raw` происходит перекодирование jpeg->raw с использванием пакета `image_transport`
+
+Если вы не используете данные `/front_camera/image_raw` рекомендуется отключить лишнее преобразование (аргумент `republish_raw`)
+
+Изменить настройки параметров камеры возможна в файле `turtlebro/launch/camera_ros.launch`
+
+### Визуализация данных&#x20;
+
+#### Web интерфейс
+
+Для просмотра видео через топики ROS, возможно использовать [веб интерфейс](../pervoe-vklyuchenie/web-interfeis.md) робота. При загрузке веб интерфейса происходит поиск всех доступных видео данных (топики с `sensor_msgs/CompressedImage`). Если такие топики найденны, то все они будет добавленны в веб интерфейс для просмотра. При добавлении новых топиков, веб интрефейс робота необходимо перезагрузить.
+
+#### Rviz
+
+Вы можете использовать rviz для отображения видео потока камеры. При удаленной работе рекомендуем выбирать для просмотра сжатые видео данные (топик `/front_camera/image_raw/compressed`)
+
+#### rqt\_image\_view или image\_view
+
+Для просмотра видео можно использовать специальные Linux программы. Например [http://wiki.ros.org/rqt\_image\_view](http://wiki.ros.org/rqt\_image\_view) или [http://wiki.ros.org/image\_view](http://wiki.ros.org/image\_view)
 
 ## Пакет uvc\_camera
 
-Пакет публикует сжатые данные `sensor_msgs/CompressedImage` в топик `front_camera/compressed`
+Пакет публикует сжатые данные `sensor_msgs/CompressedImage` в топик `front_camera/image_raw/compressed`
 
 Официальная документация пакета [http://wiki.ros.org/uvc\_camera](http://wiki.ros.org/uvc\_camera)
 
-## Пакет cv\_camera
+## Работа с камерой в OpenCV
 
-Данный пакет работает с камерой через библиотеку `ОpenCV`, может работать как в режиме `node` , так и в`nodelet`
+Для работы с OpenCV данные из камеры ROS необходимо конвертировать из топиков в обьект OpenCV
 
-Конфигурация в файле `camera_cv.launch` данные в формате `sensor_msgs/Image` в топик `front_camera/image_raw` Данные передаются в RAW формате (без компрессии), что удобно для дальнейшей программной обработки.
+#### Использование RAW топика
 
-Конвертация из `sensor_msgs/Image` в формат OpenCV возможна через библиотеку [http://wiki.ros.org/cv\_bridge](http://wiki.ros.org/cv\_bridge)
+Для создания обьекта с opencv используется библиотеке CvBridge и метод `imgmsg_to_cv2` где `image_msg` это сообщение из топика.
 
-## Работа с камерой через OpenCV
+```
+from cv_bridge import CvBridge
+from sensor_msgs.msg import CompressedImage, Image
 
-На роботе установлена библиотека `OpenCV`, поэтому с камерой можно работать напрямую, подключившись к камере "стандартной" для opencv функцией вида `cap = cv2.VideoCapture(0)`
+cvBridge = CvBridge()
+cv_image = cvBridge.imgmsg_to_cv2(image_msg, "bgr8")
+```
+
+#### Использование Сompressed топика
+
+```
+from cv_bridge import CvBridge
+from sensor_msgs.msg import CompressedImage, Image
+
+cvBridge = CvBridge()
+cv_image = cvBridge.compressed_imgmsg_to_cv2(image_msg, desired_encoding='passthrough')
+```
+
+Важно понимать что в случае использования compressed происходит дополнительное преобразование jpeg->raw. Но при этом происходит экономия сетевых ресурсов.&#x20;
+
+#### Прямой захват видео
+
+Также вы можете отключть ноду ROS по захвату изображения с камеры и сделать захват данных из своего opencv приложения самостоятельно
+
+`cap = cv2.VideoCapture(0)`
+
+После этого удобно опубликовать данные в топик самостоятельно для просмотра через веб интерфейс и тп.
 
 Далее производить с видео все необходимые манипуляции, и после этого, при необходимости, публиковать видео в топики.
 
