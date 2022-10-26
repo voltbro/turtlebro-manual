@@ -4,12 +4,12 @@
 Актуально для версии 0.10 и более новых
 {% endhint %}
 
-При включении робота автоматически включается камера `video0` и начитают публиковаться данные в топики камеры:
+При включении робота автоматически включается камера `video0` и начинают публиковаться данные в топики камеры:
 
 ```
 /front_camera/camera_info # Информация о камере
 /front_camera/image_raw  # Данные в формате sensor_msgs/Image (.jpeg)
-/front_camera/image_raw/compressed sensor_msgs/CompressedImage (RAW_
+/front_camera/image_raw/compressed sensor_msgs/CompressedImage 
 ```
 
 Данные c камеры принимаются в формате `mjpeg` и без дополнительной обработки публикуются в топик `/front_camera/image_raw/compressed`. Для заполнения топика `/front_camera/image_raw` происходит перекодирование jpeg->raw с использованием пакета `image_transport`.
@@ -17,7 +17,7 @@
 Если вы не используете данные `/front_camera/image_raw` рекомендуется отключить лишнее преобразование (аргумент `republish_raw`).
 
 {% hint style="info" %}
-Изменение настроек параметров камеры возможно в файле: `turtlebro/launch/camera_ros.launch`
+Изменение настроек параметров камеры возможно в файле: `/home/pi/catkin_ws/src/turtlebro/launch/camera_ros.launch`
 {% endhint %}
 
 ## Визуализация данных&#x20;
