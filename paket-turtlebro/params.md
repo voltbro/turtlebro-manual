@@ -49,7 +49,7 @@
 
 ## Настройка параметров запуска
 
-### Настройка параметров в файле .ros\_params <a href="#.ros-params" id=".ros-params"></a>
+### Настройка параметров в файле .ros\_params <a href="#ros_params" id="ros_params"></a>
 
 Файл `/home/pi/.ros_params` содержит параметры окружения для старта ROS:
 
@@ -113,7 +113,7 @@ sudo nano ~/catkin_ws/src/turtlebro/launch/rosserial.launch
 
 но как можно заметить, значение данного параметра берется из переменной окружения операционной системы, а конкретнее задается в файле `.ros_params`:
 
-[[#nastroika-parametrov-v-faile-.ros\_params](params.md#nastroika-parametrov-v-faile-.ros\_params "mention") ](params.md#nastroika-parametrov-v-faile-.ros\_params)
+[Настройка параметров в файле .ros\_params](params.md#.ros-params)
 
 После изменения параметров необходимо выполнить на роботе команду синхронизации данных:
 
