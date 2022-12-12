@@ -6,7 +6,7 @@ description: >-
 
 # Обновление микропрограммы с помощью программатора ST-LINK V2
 
-Для обновления микропрограммы системной платы TurtleBoard необходимо использовать программу [STM32 ST-LINK Utility](https://disk.yandex.ru/d/lfNmZ8NGI7\_0UQ).&#x20;
+Для обновления микропрограммы системной платы TurtleBoard необходимо использовать программу [STM32 ST-LINK Utility](https://disk.yandex.ru/d/10Y7USIAVKn5mQ).&#x20;
 
 Придерживайтесь следующей инструкции:
 
