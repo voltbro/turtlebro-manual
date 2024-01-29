@@ -8,7 +8,7 @@
 
 Робот разработан и поддерживается проектом "[Братья Вольт](http://www.voltbro.ru)"
 
-Видео: [Первое включение робота TurtleBro](https://youtu.be/mnTkzk\_5cMM)
+Видео по [первому включению робота TurtleBro](https://youtu.be/mnTkzk\_5cMM)
 
 {% hint style="warning" %}
 Архив документации для ROS melodic и python2&#x20;

@@ -17,7 +17,7 @@
 
 ## Администрирование ROS
 
-* [RaspberryPi](administrirovanie-ros/raspberrypi.md)
+* [Raspberry Pi](administrirovanie-ros/raspberrypi.md)
 * [Сервисы TurtleBro](administrirovanie-ros/services.md)
 * [Сборка пакетов ROS](administrirovanie-ros/sborka-paketov-ros.md)
 

@@ -1,6 +1,6 @@
 # Сборка робота
 
-Видео: [Распаковка коробки с роботом TurtleBro](https://youtu.be/jQnDnTkWb7U)
+Видео по [распаковке коробки с роботом TurtleBro](https://youtu.be/jQnDnTkWb7U)
 
 ## Вид собранного робота
 
