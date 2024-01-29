@@ -6,7 +6,7 @@
 
 1. Обновить [прошивку системной платы](platforma-turtleboard/obnovlenie-mikroprogrammy/) на прошивку версии 2.0 или новее;
 2. Подготовить [SD карту](administrirovanie-ros/raspberrypi.md) для RaspberryPi с версией ПО 0.9 или новее;
-3. В файле .ros\_params, расположенный в директории /home/pi робота Turtlebro, проверить значение переменной окружения [ROVER\_WHEEL\_PARAM](paket-turtlebro/params.md#nastroika-parametrov-v-faile-ros\_params) для задания коэффициента вращения моторов. Для старых моторов параметр ROVER\_WHEEL\_PARAM должен равняться 22500, для новых моторов этот параметр должен быть равен 12280.
+3. В файле .ros\_params, расположенный в директории /home/pi робота TurtleBro, проверить значение переменной окружения [ROVER\_WHEEL\_PARAM](paket-turtlebro/params.md#nastroika-parametrov-v-faile-ros\_params) для задания коэффициента вращения моторов. Для старых моторов параметр ROVER\_WHEEL\_PARAM должен равняться 22500, для новых моторов этот параметр должен быть равен 12280.
 
 Начиная с версии 0.9 пакеты ROS устанавливаются в двух разных директориях окружений. Системные пакеты установлены в директорию `ros_catkin_ws`. В директорию `catkin_ws` установлены пользовательские пакеты.
 

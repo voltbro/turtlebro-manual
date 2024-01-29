@@ -6,14 +6,14 @@
 * [Обновление платформы](install\_noetic.md)
 * [Обновление колесной базы](obnovlenie-kolesnoi-bazy.md)
 
-## Первое включение
+## Первое включение и настройка робота
 
-* [Сборка робота](pervoe-vklyuchenie/assembly.md)
-* [Подключение робота к Сети](pervoe-vklyuchenie/networking.md)
-* [Подключение по SSH к роботу](pervoe-vklyuchenie/ssh.md)
-* [Подключение к ROS на роботе](pervoe-vklyuchenie/podklyuchenie-iz-ros.md)
-* [Веб-интерфейс](pervoe-vklyuchenie/web-interfeis.md)
-* [Выключение робота](pervoe-vklyuchenie/turn-off-robot.md)
+* [Сборка робота](pervoe-vklyuchenie-i-nastroika-robota/assembly.md)
+* [Подключение робота к Сети](pervoe-vklyuchenie-i-nastroika-robota/networking.md)
+* [Подключение по SSH к роботу](pervoe-vklyuchenie-i-nastroika-robota/ssh.md)
+* [Подключение к ROS на роботе](pervoe-vklyuchenie-i-nastroika-robota/podklyuchenie-iz-ros.md)
+* [Веб-интерфейс](pervoe-vklyuchenie-i-nastroika-robota/web-interfeis.md)
+* [Выключение робота](pervoe-vklyuchenie-i-nastroika-robota/turn-off-robot.md)
 
 ## Администрирование ROS
 
