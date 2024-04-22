@@ -12,13 +12,11 @@
 
 ### Скачать образ
 
+Архив образов на Яндекс.Диск [https://disk.yandex.ru/d/mtfTZb0o-Ae3uw](https://disk.yandex.ru/d/mtfTZb0o-Ae3uw)
+
 Последний актуальный образ: [https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA](https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA)
 
-Архив доступных образов: [https://disk.yandex.ru/d/LEwW3\_nOPzFpKw](https://disk.yandex.ru/d/LEwW3\_nOPzFpKw)
-
-{% hint style="info" %}
 Рекомендуем выбирать самую последнюю версию!
-{% endhint %}
 
 ### Загрузка образа ОС на SD-карту
 
