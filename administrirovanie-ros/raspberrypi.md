@@ -12,7 +12,9 @@
 
 ### Скачать образ
 
-Архив доступных образов: [https://yadi.sk/d/U0G80JoXs9eqcA](https://yadi.sk/d/U0G80JoXs9eqcA)&#x20;
+Последний актуальный образ: [https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA](https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA)
+
+Архив доступных образов: [https://disk.yandex.ru/d/LEwW3\_nOPzFpKw](https://disk.yandex.ru/d/LEwW3\_nOPzFpKw)
 
 {% hint style="info" %}
 Рекомендуем выбирать самую последнюю версию!
