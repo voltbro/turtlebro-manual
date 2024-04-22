@@ -12,7 +12,7 @@
 
 ### Скачать образ
 
-Архив образов на Яндекс.Диск [https://disk.yandex.ru/d/mtfTZb0o-Ae3uw](https://disk.yandex.ru/d/mtfTZb0o-Ae3uw)
+Папка с образами на Яндекс.Диск [https://disk.yandex.ru/d/mtfTZb0o-Ae3uw](https://disk.yandex.ru/d/mtfTZb0o-Ae3uw)
 
 Последний актуальный образ: [https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA](https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA)
 
