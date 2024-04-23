@@ -34,7 +34,7 @@
 
 Робот попытается подключиться по сети согласно старых [настроек сети](pervoe-vklyuchenie-i-nastroika-robota/networking.md).
 
-Имя робота после установки нового образа `turtlebro01`
+Имя робота после установки нового образа `ros2`
 
 SSH подключение [согласно страницы](pervoe-vklyuchenie-i-nastroika-robota/ssh.md)  (пользователь `pi`, пароль `brobro`)
 
