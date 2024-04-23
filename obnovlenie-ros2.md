@@ -10,7 +10,7 @@
 
 Скачать образ [https://disk.yandex.ru/d/fwXInv5GtNlwPg](https://disk.yandex.ru/d/fwXInv5GtNlwPg) (Все доступные прошивки [https://disk.yandex.ru/d/aw4XiktAn1HyUQ](https://disk.yandex.ru/d/aw4XiktAn1HyUQ))
 
-Инструкция по [заливке образа ](obnovlenie-ros2.md#obnovlenie-sd-karty-raspberry)
+Инструкция по [заливке образа ](administrirovanie-ros/raspberrypi.md)
 
 В систему установятся дополнительные пользовательские пакеты (аналоги старых пакетов ROS1)
 
@@ -20,7 +20,7 @@
 
 ### Обновление прошивки системной платы робота
 
-Для поддержки управления платой через Raspberry необходимо обновить ПО платы. Новая прошивка создана на базе фреймворка `microROS` (https://micro.ros.org), являющегося "идейным" продолжением библиотеки rosserial. Все системные топики управления платформой работают на микроконтроллере.
+Для поддержки управления роботом через Raspberry необходимо обновить ПО платы. Новая прошивка создана на базе фреймворка `microROS` ([https://micro.ros.org](https://micro.ros.org)), являющегося "идейным" продолжением библиотеки `rosserial`. Все системные топики управления платформой работают на микроконтроллере.
 
 Скачать прошивку МК [https://disk.yandex.ru/d/NoKRunp35baOzQ](https://disk.yandex.ru/d/NoKRunp35baOzQ) (Все доступные прошивки [https://disk.yandex.ru/d/fipuDuX39-VnuA](https://disk.yandex.ru/d/fipuDuX39-VnuA))
 
@@ -28,7 +28,7 @@
 
 ### Запуск и подключение к роботу
 
-После обновления SDкарты и прошивки робот готов для работы с `ROS2`.
+После обновления SDкарты и прошивки робот готов для работы.
 
 Робот попытается подключиться по сети согласно старых [настроек сети](pervoe-vklyuchenie-i-nastroika-robota/networking.md).
 
@@ -40,13 +40,13 @@ SSH подключение [согласно страницы](pervoe-vklyucheni
 
 ### Web интерфейс
 
-Для экспресс проверки работы робота доступен старый [Веб-интерфейс](pervoe-vklyuchenie-i-nastroika-robota/web-interfeis.md).
+Для экспресс проверки доступен старый [Веб-интерфейс](pervoe-vklyuchenie-i-nastroika-robota/web-interfeis.md).
 
-#### Подключение к ROS на роботе
+### Подключение к ROS на роботе
 
 После подключения к роботу по ssh, работают все `ros2` команды.
 
-Робот настроен для работы в режиме `Discovery-Server`. ([https://docs.ros.org/en/iron/Tutorials/Advanced/Discovery-Server/Discovery-Server.html](https://docs.ros.org/en/iron/Tutorials/Advanced/Discovery-Server/Discovery-Server.html)) Работа в режиме  [Simple Discovery](https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/simple.html) в условиях работы по WiFi и множества аналогичных устройств в сети показала себя не надежной.
+Робот настроен для работы в режиме [Discovery-Server](https://docs.ros.org/en/iron/Tutorials/Advanced/Discovery-Server/Discovery-Server.html). Работа в режиме  [Simple Discovery](https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/simple.html) в условиях работы по WiFi и множества аналогичных устройств в сети показала себя более запутанной и не надежной.
 
 Робот запускает `fastdds server` с настройками `-l 127.0.0.1 -p 11811`
 
@@ -84,16 +84,16 @@ export FASTRTPS_DEFAULT_PROFILES_FILE=./fastdds_supeclient.xml
 
 После завершения настроек, при выполнении команды `ros2 topic list` вы увидите топики вашего робота.
 
-#### Доступные сервисы
+### Доступные сервисы
 
-Основной сервис необходимый для работы робота
+Основной сервис необходимый для работы робота `turtlebro`
 
 ```bash
 sudo systemctl start turtlebro
 sudo systemctl stop turtlebro
 ```
 
-При выполнении запуска сервиса запускается launch файл пакета `turtlebro` `turtlebro.xml`
+При выполнении запуска сервиса запускается `launch` файл пакета `turtlebro` `turtlebro.xml`
 
 Сервис-агент для работы `microros`
 
