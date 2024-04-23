@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Инструкция робота TurtleBro](README.md)
+* [Обновление ROS2](obnovlenie-ros2.md)
 * [Безопасность](safety.md)
 * [Полезные ссылки](links.md)
 * [Обновление платформы](install\_noetic.md)
