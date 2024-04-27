@@ -9,16 +9,16 @@
 Образ можно использовать для следующей модели Raspberry:
 
 * Raspberry 4
+* Raspberry 5
 
-### Скачать образ
+### Образы операционной системы
 
-Папка с образами на Яндекс.Диск [https://disk.yandex.ru/d/mtfTZb0o-Ae3uw](https://disk.yandex.ru/d/mtfTZb0o-Ae3uw)
-
-Последний актуальный образ: [https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA](https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA)
+* Последний _актуальный_ образ можно скачать по ссылке: [https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA](https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA)
+* Все доступные образы можно найти Яндекс.Диске: [https://disk.yandex.ru/d/mtfTZb0o-Ae3uw](https://disk.yandex.ru/d/mtfTZb0o-Ae3uw)
 
 Рекомендуем выбирать самую последнюю версию!
 
-### Загрузка образа ОС на SD-карту
+### Загрузка образа ОС на SD-карту без настроек
 
 Проще всего загрузить образ на SD карту с помощью программы balenaEtcher [https://www.balena.io/etcher/](https://www.balena.io/etcher/) \
 Программа обладает поддержкой всех основных операционных систем.
@@ -28,6 +28,70 @@
 По умолчанию, имя робота установлено `turtlebro01`. Рекомендуется сразу изменить его на имя согласно номера платы `turtlebroNN`. Для этого необходимо отредактировать файлы, которые находятся в **разделе** `system` в папке `/etc`:`/hosts` и`/hostname` , расположенные на роботе и переименовать `turtlebro01->tutlebroNN`. Удобнее всего это сделать на компьютере с ОС Linux подключив SD карту или уже на включенном роботе, а потом перезагрузить его.
 
 Версию образа можно посмотреть в **разделе** `system` в `/boot/version` на microSD карте.
+
+### Загрузка образа ОС на SD-карту с дополнительными настройками
+
+
+
+* Скачайте и установите программу для записи ОС для Raspberry Pi - Raspberry Pi Imager: [https://www.raspberrypi.com/software/](https://www.raspberrypi.com/software/)
+* Запустите Raspberry Pi Imager:
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Главное окно Raspberry Pi Imager</p></figcaption></figure>
+
+* Выберите устройство Raspberry Pi - Raspberry Pi 4:
+
+<figure><img src="../.gitbook/assets/1 (1).png" alt=""><figcaption><p>Выбрать Raspberry Pi 4</p></figcaption></figure>
+
+* В окне выбора ОС перейдите в самый низ и выберите Use custom
+
+<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption><p>Выберите Use custom</p></figcaption></figure>
+
+* Далее выберите образ ОС, который вы хотите записать на microSD:
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+* Подключите microSD карту к ноутбуку и выберите её как устройство, на которое будет записана ОС:
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+* Если все настройки сделаны верно, то главный экран программы должен выглядеть вот так:
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+* Нажмите "Далее" и выберите "Изменить параметры":
+
+<figure><img src="../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+
+* Далее, во вкладке "Общие", вы сможете установить необходимые вам настройки образа ОС такие как:
+  * Имя хоста. Мы рекомендуем устанавливать имя хоста: `turtlebroNN`, где NN - номер робота на наклейке
+  * Имя пользователя и пароль. Рекомендуем указывать имя робота: `pi;` пароль- `brobro`
+  * Настройки Wi-Fi. Здесь вы можете указать настройки своей сети. По умолчанию мы рекомендуем использовать роутеры со следующими параметрами:&#x20;
+    * SSID: TurtleBro или TurtleBro5G
+    * Пароль: turtlew001
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Экран параметров "Общие"</p></figcaption></figure>
+
+* Во вкладке "Службы" необходимо включить протокол SSH:
+
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Экран параметров "Службы"</p></figcaption></figure>
+
+* Во вкладке "Параметры" установите следующие настройки:
+
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Экран параметров "Параметры"</p></figcaption></figure>
+
+* Примените заданные параметры нажатием "Да"
+
+<figure><img src="../.gitbook/assets/4.png" alt=""><figcaption><p>Нажмите "Да"</p></figcaption></figure>
+
+* Согласитесь с форматированием запоминающего устройства:
+
+<figure><img src="../.gitbook/assets/5.png" alt=""><figcaption><p>Нажмите "Да"</p></figcaption></figure>
+
+* Дождитесь записи ОС на microSD:
+
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+* После окончания процесса записи, отключите microSD карту от ноутбука, вставьте её в Raspberry Pi робота TurtleBro и включите его. Обратите внимание, что первая загрузка робота может длиться дольше обычного (1.5 - 2 минуты). Если вы сделали всё правильно, то робот подключится к вашей сети с теми именами пользователя и хоста, которые вы указывали в вкладке "Общее" окна настроек.
 
 ### Установленное ПО на SD карту
 
