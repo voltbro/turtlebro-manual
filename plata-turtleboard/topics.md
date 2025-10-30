@@ -28,7 +28,7 @@ string location
 string serial_number
 ```
 
-## Топик /cmd\_vel
+## Топик /cmd_vel
 
 Топик для управления перемещением робота. Тип сообщения: `geometry_msgs/Twist` При публикации данных в топик робот начинает движение. Робот выполняет последнюю полученную команду до тех пор, пока не получит новые данные. Поэтому, например, для остановки робота необходимо передать "нулевые" значения скорости.
 
@@ -76,7 +76,7 @@ float64[9] linear_acceleration_covariance
 
 `sudo apt install ros-noetic-rviz-imu-plugin`
 
-При добавлении визуализации данных в rviz необходимо выбрать тип сообщения rviz\_imu\_plugin->Imu
+При добавлении визуализации данных в `rviz` необходимо выбрать тип сообщения ```rviz_imu_plugin->Imu```
 
 ## Топик /odom
 
@@ -113,7 +113,7 @@ geometry_msgs/TwistWithCovariance twist
   float64[36] covariance
 ```
 
-## Топик /odom\_pose2d
+## Топик /odom_pose2d
 
 Упрощенные данные одометрии в 2d пространстве. Тип сообщения: `geometry_msgs/Pose2D`
 
@@ -143,7 +143,7 @@ float32[] ranges
 float32[] intensities
 ```
 
-## Топик /raw\_odom
+## Топик /raw_odom
 
 Данные полученные энкодеров колес. Время, счетчик "тиков" и угол датчика IMU. Тип сообщения: `turtlebro/RawOdom`
 

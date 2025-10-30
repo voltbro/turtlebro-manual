@@ -6,41 +6,41 @@
 
 **По умолчанию запускаются следующие ноды:**
 
-`/arduino_serial_node`\
-`/republish_raw`\
-`/robot_state_publisher`\
-`/rosapi`\
-`/rosbridge_websocket`\
-`/rosout`\
-`/rplidarNode`\
-`/simple_odom`\
-`/stm_serial_node`\
-`/uvc_camera_node`\
-`/web_telemetry_node`\
-`/web_video_server`\
+`/arduino_serial_node`
+`/republish_raw`
+`/robot_state_publisher`
+`/rosapi`
+`/rosbridge_websocket`
+`/rosout`
+`/rplidarNode`
+`/simple_odom`
+`/stm_serial_node`
+`/uvc_camera_node`
+`/web_telemetry_node`
+`/web_video_server`
 `/webserver`
 
 **Работают топики:**
 
-`/bat`\
-`/client_count`\
-`/cmd_vel`\
-`/connected_clients`\
-`/diagnostics`\
-`/front_camera/camera_info`\
-`/front_camera/image_raw`\
-`/front_camera/image_raw/compressed`\
-`/imu`\
-`/joint_states`\
-`/odom`\
-`/odom_pose2d`\
-`/raw_odom`\
-`/republish_raw/compressed/parameter_descriptions /republish_raw/compressed/parameter_updates`\
-`/rosout`\
-`/rosout_agg`\
-`/scan`\
-`/tf`\
-`/tf_static`\
+`/bat`
+`/client_count`
+`/cmd_vel`
+`/connected_clients`
+`/diagnostics`
+`/front_camera/camera_info`
+`/front_camera/image_raw`
+`/front_camera/image_raw/compressed`
+`/imu`
+`/joint_states`
+`/odom`
+`/odom_pose2d`
+`/raw_odom`
+`/republish_raw/compressed/parameter_descriptions /republish_raw/compressed/parameter_updates`
+`/rosout`
+`/rosout_agg`
+`/scan`
+`/tf`
+`/tf_static`
 `/web_tele`
 
 **Запущены сервисы:**
@@ -49,7 +49,7 @@
 
 ## Настройка параметров запуска
 
-### Настройка параметров в файле .ros\_params <a href="#ros_params" id="ros_params"></a>
+### Настройка параметров в файле .ros_params <a href="#ros_params" id="ros_params"></a>
 
 Файл `/home/pi/.ros_params` содержит параметры окружения для старта ROS:
 
@@ -61,22 +61,22 @@ export ROVER_MODEL=turtlebro
 export ROVER_WHEEL_PARAM=12280
 ```
 
-Переменная окружения ROVER\_WHEEL\_PARAM определяет параметр **wheel\_param** для определения типа моторов. Для старых моторов применяется значение: 22500; для новых моторов: 12280. Если одометрия робота из топика не совпадает с реальным перемещением робота, необходимо провести калибровку параметра.
+Переменная окружения ROVER_WHEEL_PARAM определяет параметр **wheel_param** для определения типа моторов. Для старых моторов применяется значение: 22500; для новых моторов: 12280. Если одометрия робота из топика не совпадает с реальным перемещением робота, необходимо провести калибровку параметра.
 
 ### Параметры одометрии
 
 Для того, чтобы одометрия точно отображала реальное перемещение робота используются два параметра:&#x20;
 
-* **stm\_serial\_node/wheel\_distance** double&#x20;
+* **stm_serial_node/wheel_distance** double&#x20;
   * тип данных - _числовой 64-битный тип_
   * размерность - _метры_
   * обозначает - _расстояние между колесами_
-* **stm\_serial\_node/wheel\_param** uint32\_t&#x20;
+* **stm_serial_node/wheel_param** uint32_t&#x20;
   * тип данных - _числовой 32-битовый без знака_
   * размерность - _безразмерный_
   * обозначает- _число тиков энкодера на метр_. Является расчётным коэффициентом.
 
-Для расчёта параметра **wheel\_param** используется следующая формула:
+Для расчёта параметра **wheel_param** используется следующая формула:
 
 ```
 wheel_param = ticks*red_ratio/circle
@@ -95,17 +95,15 @@ wheel_param = 44,75 * 56/0,2041 = ~12278
 
 #### Установка параметров&#x20;
 
-Установка параметра **wheel\_distance** возможна в launch-файле `rosserial.launch` в пакете turtlebro:&#x20;
+Установка параметра **wheel_distance** возможна в launch-файле `rosserial.launch` в пакете turtlebro:&#x20;
 
 ```
 sudo nano ~/catkin_ws/src/turtlebro/launch/rosserial.launch
-
 ==============
-
 <param name="wheel_distance" type="double" value="0.185"/>
 ```
 
-Также в лаунч-файле `rosserial.launch` есть возможность задачи параметра **wheel\_param**:
+Также в лаунч-файле `rosserial.launch` есть возможность задачи параметра **wheel_param**:
 
 ```
 <param name="wheel_param" value="$(optenv ROVER_WHEEL_PARAM 22500)"/>
@@ -113,7 +111,7 @@ sudo nano ~/catkin_ws/src/turtlebro/launch/rosserial.launch
 
 но как можно заметить, значение данного параметра берется из переменной окружения операционной системы, а конкретнее задается в файле `.ros_params`:
 
-[Настройка параметров в файле .ros\_params](params.md#ros\_params)
+[Настройка параметров в файле .ros_params](params.md#ros_params)
 
 После изменения параметров необходимо выполнить на роботе команду синхронизации данных:
 
@@ -147,10 +145,10 @@ rosservice call /set_pid "Ki: 0.0 Kp: 0.0 Kd: 0.0"
 <arg name="run_simple_odom" default="true"/>
 ```
 
-`run_rosserial` -- запуск rosserial.launch для соединения с Arduino и STM МК\
-`run_rplidar` -- запустить получение данные с RPLidar\
-`run_turtlebro_web` -- запуск веб-интерфейса робота\
-`run_camera_ros` -- включить камеру через пакет `uvc_camera`\
+`run_rosserial` -- запуск rosserial.launch для соединения с Arduino и STM МК
+`run_rplidar` -- запустить получение данные с RPLidar
+`run_turtlebro_web` -- запуск веб-интерфейса робота
+`run_camera_ros` -- включить камеру через пакет `uvc_camera`
 `run_simple_odom` -- подключить паблишер приведенной одометрии. Топик `/odom_pose2d`
 
 ## Файл rosserial.launch
@@ -171,6 +169,6 @@ rosservice call /set_pid "Ki: 0.0 Kp: 0.0 Kd: 0.0"
 
 Данные с лидара вычисляются относительно фрейма `base_scan`
 
-## Файл camera\_ros.launch
+## Файл camera_ros.launch
 
-Файл для запуска издателя с данными полученными из фронтальной камеры. Подробнее о [работе с камерой](video-new.md#paket-uvc\_camera)
+Файл для запуска издателя с данными полученными из фронтальной камеры. Подробнее о [работе с камерой](video-new.md#paket-uvc_camera)

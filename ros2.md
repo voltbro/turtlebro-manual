@@ -12,23 +12,23 @@
 Образ проверен на `Raspberry Pi 4 - 2 Гб`
 {% endhint %}
 
-Образ можно скачать по ссылке: [https://disk.yandex.ru/d/fwXInv5GtNlwPg](https://disk.yandex.ru/d/fwXInv5GtNlwPg) \
+Образ можно скачать по ссылке: [https://disk.yandex.ru/d/fwXInv5GtNlwPg](https://disk.yandex.ru/d/fwXInv5GtNlwPg) 
 Все доступные прошивки для робота TurtleBro: [https://disk.yandex.ru/d/aw4XiktAn1HyUQ](https://disk.yandex.ru/d/aw4XiktAn1HyUQ)
 
-Инструкция по [обновлению образа](administrirovanie-ros/raspberrypi.md)\
-Видеоинструкция по обновлению образа: [https://youtu.be/OGzLALB51Pc?si=Lx\_xFs8W3NmIZM82](https://youtu.be/OGzLALB51Pc?si=Lx\_xFs8W3NmIZM82)
+Инструкция по [обновлению образа](administrirovanie-ros/raspberrypi.md)
+Видеоинструкция по обновлению образа: [https://youtu.be/OGzLALB51Pc?si=Lx_xFs8W3NmIZM82](https://youtu.be/OGzLALB51Pc?si=Lx_xFs8W3NmIZM82)
 
 В образе уже установлены дополнительные пользовательские пакеты (аналоги старых пакетов ROS1):
 
 * turtlebro [https://github.com/voltbro/turtlebro2](https://github.com/voltbro/turtlebro2)
-* turtlebro\_navigation [https://github.com/voltbro/turtlebro2\_navigation/](https://github.com/voltbro/turtlebro2\_navigation/)
-* turtlebro\_web [https://github.com/voltbro/turtlebro2\_web](https://github.com/voltbro/turtlebro2\_web)
+* turtlebro_navigation [https://github.com/voltbro/turtlebro2_navigation/](https://github.com/voltbro/turtlebro2_navigation/)
+* turtlebro_web [https://github.com/voltbro/turtlebro2_web](https://github.com/voltbro/turtlebro2_web)
 
 ### Обновление прошивки системной платы робота
 
 Для поддержки управления роботом через Raspberry необходимо обновить ПО платы Turtleboard. Новая прошивка создана на базе фреймворка `microROS` ([https://micro.ros.org](https://micro.ros.org)), являющегося "идейным" продолжением библиотеки `rosserial`. Все системные топики управления платформой работают на микроконтроллере.
 
-Прошивку для МК можно скачать по ссылке: [https://disk.yandex.ru/d/NoKRunp35baOzQ](https://disk.yandex.ru/d/NoKRunp35baOzQ) \
+Прошивку для МК можно скачать по ссылке: [https://disk.yandex.ru/d/NoKRunp35baOzQ](https://disk.yandex.ru/d/NoKRunp35baOzQ) 
 Все доступные прошивки для робота TurtleBro: [https://disk.yandex.ru/d/fipuDuX39-VnuA](https://disk.yandex.ru/d/fipuDuX39-VnuA)
 
 Инструкция по [обновлению МК](platforma-turtleboard/obnovlenie-mikroprogrammy/) (необходим USB-UART переходник или программатор ST-LINK V2)

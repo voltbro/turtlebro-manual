@@ -2,7 +2,7 @@
 
 Установить последнюю версию пакета `turtlebro` можно из репозитория GitHub [https://github.com/voltbro/turtlebro](https://github.com/voltbro/turtlebro)
 
-Пакет необходимо установить в директорию /home/pi/catkin\_ws/src/turtlebro
+Пакет необходимо установить в директорию /home/pi/catkin_ws/src/turtlebro
 
 Скачать пакет (если пакет не был установлен):
 

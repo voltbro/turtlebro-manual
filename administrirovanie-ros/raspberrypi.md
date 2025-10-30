@@ -13,14 +13,14 @@
 
 ### Образы операционной системы
 
-* Последний _актуальный_ образ можно скачать по ссылке: [https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA](https://disk.yandex.ru/d/gYR7yxC3uQ\_yMA)
+* Последний _актуальный_ образ можно скачать по ссылке: [https://disk.yandex.ru/d/gYR7yxC3uQ_yMA](https://disk.yandex.ru/d/gYR7yxC3uQ_yMA)
 * Все доступные образы можно найти Яндекс.Диске: [https://disk.yandex.ru/d/mtfTZb0o-Ae3uw](https://disk.yandex.ru/d/mtfTZb0o-Ae3uw)
 
 Рекомендуем выбирать самую последнюю версию!
 
 ### Загрузка образа ОС на SD-карту без настроек
 
-Проще всего загрузить образ на SD карту с помощью программы balenaEtcher [https://www.balena.io/etcher/](https://www.balena.io/etcher/) \
+Проще всего загрузить образ на SD карту с помощью программы balenaEtcher [https://www.balena.io/etcher/](https://www.balena.io/etcher/) 
 Программа обладает поддержкой всех основных операционных систем.
 
 ![](../.gitbook/assets/Etcher.png)
@@ -40,7 +40,7 @@
 
 * Выберите устройство Raspberry Pi - Raspberry Pi 4:
 
-<figure><img src="../.gitbook/assets/1 (1).png" alt=""><figcaption><p>Выбрать Raspberry Pi 4</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/1_1.png" alt=""><figcaption><p>Выбрать Raspberry Pi 4</p></figcaption></figure>
 
 * В окне выбора ОС перейдите в самый низ и выберите Use custom
 
@@ -48,15 +48,15 @@
 
 * Далее выберите образ ОС, который вы хотите записать на microSD:
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image_2.png" alt=""><figcaption></figcaption></figure>
 
 * Подключите microSD карту к ноутбуку и выберите её как устройство, на которое будет записана ОС:
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image_3.png" alt=""><figcaption></figcaption></figure>
 
 * Если все настройки сделаны верно, то главный экран программы должен выглядеть вот так:
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image_4.png" alt=""><figcaption></figcaption></figure>
 
 * Нажмите "Далее" и выберите "Изменить параметры":
 
@@ -69,15 +69,15 @@
     * SSID: TurtleBro или TurtleBro5G
     * Пароль: turtlew001
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Экран параметров "Общие"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image_6.png" alt=""><figcaption><p>Экран параметров "Общие"</p></figcaption></figure>
 
 * Во вкладке "Службы" необходимо включить протокол SSH:
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Экран параметров "Службы"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image_7.png" alt=""><figcaption><p>Экран параметров "Службы"</p></figcaption></figure>
 
 * Во вкладке "Параметры" установите следующие настройки:
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Экран параметров "Параметры"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image_8.png" alt=""><figcaption><p>Экран параметров "Параметры"</p></figcaption></figure>
 
 * Примените заданные параметры нажатием "Да"
 
@@ -89,7 +89,7 @@
 
 * Дождитесь записи ОС на microSD:
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image_9.png" alt=""><figcaption></figcaption></figure>
 
 * После окончания процесса записи, отключите microSD карту от ноутбука, вставьте её в Raspberry Pi робота TurtleBro и включите его. Обратите внимание, что первая загрузка робота может длиться дольше обычного (1.5 - 2 минуты). Если вы сделали всё правильно, то робот подключится к вашей сети с теми именами пользователя и хоста, которые вы указывали в вкладке "Общее" окна настроек.
 
@@ -101,7 +101,7 @@
 
 Также установлены пакеты для функционирования робота:&#x20;
 
-`turtlebro`\
-`turtlebro_extra`\
-`turtlebro_navigation`\
+`turtlebro`
+`turtlebro_extra`
+`turtlebro_navigation`
 `turtlebro_web`

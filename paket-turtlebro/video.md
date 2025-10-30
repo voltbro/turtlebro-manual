@@ -19,19 +19,19 @@ Web интерфейс для просмотра видео и управлен�
 
 Выключить веб интерфейс `run_turtlebro_web` и включить `run_camera_ros`
 
-## Пакет uvc\_camera
+## Пакет uvc_camera
 
 Пакет публикует сжатые данные `sensor_msgs/CompressedImage` в топик `front_camera/compressed`
 
-Официальная документация пакета [http://wiki.ros.org/uvc\_camera](http://wiki.ros.org/uvc\_camera)
+Официальная документация пакета [http://wiki.ros.org/uvc_camera](http://wiki.ros.org/uvc_camera)
 
-## Пакет cv\_camera
+## Пакет cv_camera
 
 Данный пакет работает с камерой через библиотеку `ОpenCV`, может работать как в режиме `node` , так и в`nodelet`
 
 Конфигурация в файле `camera_cv.launch` данные в формате `sensor_msgs/Image` в топик `front_camera/image_raw` Данные передаются в RAW формате (без компрессии), что удобно для дальнейшей программной обработки.
 
-Конвертация из `sensor_msgs/Image` в формат OpenCV возможна через библиотеку [http://wiki.ros.org/cv\_bridge](http://wiki.ros.org/cv\_bridge)
+Конвертация из `sensor_msgs/Image` в формат OpenCV возможна через библиотеку [http://wiki.ros.org/cv_bridge](http://wiki.ros.org/cv_bridge)
 
 ## Работа с камерой через OpenCV
 
@@ -39,4 +39,4 @@ Web интерфейс для просмотра видео и управлен�
 
 Далее производить с видео все необходимые манипуляции, и после этого, при необходимости, публиковать видео в топики.
 
-Пример программы на pytnon, которая, используя `opencv` , следит за цветным мячиком и управляет роботом: [ball\_tracking.py](https://github.com/voltbro/turtlebro\_examples/blob/master/src/ball\_tracking.py)
+Пример программы на pytnon, которая, используя `opencv` , следит за цветным мячиком и управляет роботом: [ball_tracking.py](https://github.com/voltbro/turtlebro_examples/blob/master/src/ball_tracking.py)

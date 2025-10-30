@@ -8,6 +8,7 @@
 
 |               USB-UART переходник              |             Программатор ST-LINK V2            |
 | :--------------------------------------------: | :--------------------------------------------: |
-| ![](<../../.gitbook/assets/image (2) (1).png>) | ![](<../../.gitbook/assets/image (3) (1).png>) |
+| ![](<../../.gitbook/assets/image_2_1.png>)  | ![](<../../.gitbook/assets/image_3_1.png>) |
+| [Обновление с помощью USB-UART](./obnovlenie-mikroprogrammy.html)  | [Обновление с помощью  ST-LINK V2](./obnovlenie-mikroprogrammy-s-pomoshyu-programmatora-st-link-v2.html) | 
 
 Далее представлены две инструкции по обновлению микропрограмм с помощью этих двух устройств.

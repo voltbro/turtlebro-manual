@@ -30,15 +30,15 @@
 
 Вы можете использовать rviz для отображения видеопотока камеры. При удаленной работе рекомендуем выбирать для просмотра сжатые видеоданные (топик `/front_camera/image_raw/compressed`)
 
-#### rqt\_image\_view или image\_view
+#### rqt_image_view или image_view
 
-Для просмотра видео можно использовать специальные Linux программы. Например [http://wiki.ros.org/rqt\_image\_view](http://wiki.ros.org/rqt\_image\_view) или [http://wiki.ros.org/image\_view](http://wiki.ros.org/image\_view)
+Для просмотра видео можно использовать специальные Linux программы. Например [http://wiki.ros.org/rqt_image_view](http://wiki.ros.org/rqt_image_view) или [http://wiki.ros.org/image_view](http://wiki.ros.org/image_view)
 
-## Пакет uvc\_camera
+## Пакет uvc_camera
 
 Пакет публикует сжатые данные `sensor_msgs/CompressedImage` в топик `front_camera/image_raw/compressed`
 
-Официальная документация пакета [http://wiki.ros.org/uvc\_camera](http://wiki.ros.org/uvc\_camera)
+Официальная документация пакета [http://wiki.ros.org/uvc_camera](http://wiki.ros.org/uvc_camera)
 
 ## Работа с камерой в OpenCV
 
@@ -78,4 +78,4 @@ cv_image = cvBridge.compressed_imgmsg_to_cv2(image_msg, desired_encoding='passth
 
 Далее производить с видео все необходимые манипуляции, и после этого, при необходимости, публиковать видео в топики.
 
-Пример программы на pytnon, которая, используя `opencv` , следит за цветным мячиком и управляет роботом: [ball\_tracking.py](https://github.com/voltbro/turtlebro\_examples/blob/master/src/ball\_tracking.py)
+Пример программы на pytnon, которая, используя `opencv` , следит за цветным мячиком и управляет роботом: [ball_tracking.py](https://github.com/voltbro/turtlebro_examples/blob/master/src/ball_tracking.py)

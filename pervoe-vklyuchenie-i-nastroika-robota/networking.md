@@ -6,7 +6,7 @@
 
 ## Настройка подключения к Wi-Fi
 
-Видео по [настройке подключения робота TurtleBro к новым Wi-Fi сетям](https://youtu.be/7Y\_IsCfOdNw)
+Видео по [настройке подключения робота TurtleBro к новым Wi-Fi сетям](https://youtu.be/7Y_IsCfOdNw)
 
 #### Подключение к точке WiFi по умолчанию
 
@@ -67,10 +67,10 @@ network={
 
 На SD карте, содержащей готовый образ системы для запуска на роботе, есть два раздела разного размера. Обычно они называются `system` и `boot`, но иногда система может назвать их по-другому при подключении к компьютеру.&#x20;
 
-Раздел `system` содержит стандартный набор директорий файловой системы Linux и занимает основной объем SD карты (подробнее - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)). \
+Раздел `system` содержит стандартный набор директорий файловой системы Linux и занимает основной объем SD карты (подробнее - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)). 
 
 
-Раздел `boot`небольшой и содержит настройки запуска Raspberry (подробнее - [https://www.raspberrypi.org/documentation/configuration/boot\_folder.md](https://www.raspberrypi.org/documentation/configuration/boot\_folder.md))&#x20;
+Раздел `boot`небольшой и содержит настройки запуска Raspberry (подробнее - [https://www.raspberrypi.org/documentation/configuration/boot_folder.md](https://www.raspberrypi.org/documentation/configuration/boot_folder.md))&#x20;
 
 ![](<../.gitbook/assets/Screenshot from 2022-02-08 16-22-24.png>)
 
