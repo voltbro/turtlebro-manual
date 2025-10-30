@@ -2,9 +2,9 @@
 
 ## Схема платы
 
-![Вид сверху](../.gitbook/assets/Board-manual.001.jpeg)
+![Вид сверху](../.gitbook/assets/board-manual.001.jpeg)
 
-![Вид снизу](../.gitbook/assets/Board-manual.002.jpeg)
+![Вид снизу](../.gitbook/assets/board-manual.002.jpeg)
 
 ### Назначение кнопок на плате
 
