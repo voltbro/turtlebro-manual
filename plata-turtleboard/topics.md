@@ -45,7 +45,7 @@ geometry_msgs/Vector3 angular
 
 ## Топик /imu
 
-Данные инерционного датчика  (Inertial measurement unit), включающего в себя гироскоп, акселерометр и компас. Тип сообщения: `sensor_msgs/Imu`
+Данные инерционного датчика  (Inertial measurement unit), включающего в себя гироскоп, акселерометр и компас. Тип сообщения: `sensor_msgs/imu`
 
 ```
 std_msgs/Header header

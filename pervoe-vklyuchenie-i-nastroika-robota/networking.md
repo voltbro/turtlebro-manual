@@ -72,7 +72,7 @@ network={
 
 Раздел `boot`небольшой и содержит настройки запуска Raspberry (подробнее - [https://www.raspberrypi.org/documentation/configuration/boot_folder.md](https://www.raspberrypi.org/documentation/configuration/boot_folder.md))&#x20;
 
-![](<../.gitbook/assets/Screenshot from 2022-02-08 16-22-24.png>)
+![](<../.gitbook/assets/screenshot from 2022-02-08 16-22-24.png>)
 
 Если на этапе загрузки Raspberry найдет файл `wpa_supplicant.conf` в **разделе** `boot` то этот файл будет перемещен в **раздел** `system`, а именно в `/etc/wpa_supplicant/wpa_supplicant.conf` и таким образом станет конфигурационным файлом подключения к Wi-Fi сетям.
 

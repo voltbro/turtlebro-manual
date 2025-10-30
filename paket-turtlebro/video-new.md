@@ -8,7 +8,7 @@
 
 ```
 /front_camera/camera_info # Информация о камере
-/front_camera/image_raw  # Данные в формате sensor_msgs/Image (.jpeg)
+/front_camera/image_raw  # Данные в формате sensor_msgs/image (.jpeg)
 /front_camera/image_raw/compressed sensor_msgs/CompressedImage 
 ```
 

@@ -29,9 +29,9 @@ Web интерфейс для просмотра видео и управлен�
 
 Данный пакет работает с камерой через библиотеку `ОpenCV`, может работать как в режиме `node` , так и в`nodelet`
 
-Конфигурация в файле `camera_cv.launch` данные в формате `sensor_msgs/Image` в топик `front_camera/image_raw` Данные передаются в RAW формате (без компрессии), что удобно для дальнейшей программной обработки.
+Конфигурация в файле `camera_cv.launch` данные в формате `sensor_msgs/image` в топик `front_camera/image_raw` Данные передаются в RAW формате (без компрессии), что удобно для дальнейшей программной обработки.
 
-Конвертация из `sensor_msgs/Image` в формат OpenCV возможна через библиотеку [http://wiki.ros.org/cv_bridge](http://wiki.ros.org/cv_bridge)
+Конвертация из `sensor_msgs/image` в формат OpenCV возможна через библиотеку [http://wiki.ros.org/cv_bridge](http://wiki.ros.org/cv_bridge)
 
 ## Работа с камерой через OpenCV
 
