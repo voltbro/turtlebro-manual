@@ -6,13 +6,13 @@
 
 Робот поставляется в собранном виде. Для включения робота необходимо подать питание на разъем "DC IN" или подключить заряженный аккумулятор, а затем перевести переключатель питания в положение ON.
 
-![](../.gitbook/assets/img_0716.JPG)
+![](../.gitbook/assets/img_0716.jpg)
 
-![](../.gitbook/assets/img_0719.JPG)
+![](../.gitbook/assets/img_0719.jpg)
 
-![](../.gitbook/assets/img_0718.JPG)
+![](../.gitbook/assets/img_0718.jpg)
 
-![](../.gitbook/assets/img_0717.JPG)
+![](../.gitbook/assets/img_0717.jpg)
 
 ## Аккумуляторный блок
 

@@ -4,6 +4,6 @@
 
 На этой странице будут доступны основные данные робота и изображение получаемое из камеры:
 
-<figure><img src="../.gitbook/assets/web-interface.PNG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/web-interface.png" alt=""><figcaption></figcaption></figure>
 
 Роботом можно управлять кнопками **WSAD**.&#x20;

@@ -31,4 +31,4 @@ export ROS_HOSTNAME=<IP-адрес компьютера>
 
 Если все настройки проведены верно, вы можете выполнить на вашем компьютере команды ROS и увидеть результат их выполнения:
 
-<figure><img src="../.gitbook/assets/exportROS.PNG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/exportROS.png" alt=""><figcaption></figcaption></figure>
