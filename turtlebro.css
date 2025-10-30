@@ -1,0 +1,40 @@
+.book.font-family-1{
+    font-family: Roboto, "Roboto Fallback", system-ui, Arial !important;
+    font-weight: 400 !important;
+    font-feature-settings: normal !important;
+    font-variation-settings: normal !important;
+}
+.book{
+    color: rgb(28, 29, 31) !important;
+}
+.book-summary ul.summary li.header {
+    color: rgb(28, 29, 31) !important;
+    font-family: Roboto, "Roboto Fallback", system-ui, Arial !important;
+    font-weight: 600 !important;
+}    
+
+.book-summary ul.summary li a, .book-summary ul.summary li span {
+    padding: 7px 15px !important;
+} 
+   
+.book.font-size-0 .book-body .page-inner section {
+  font-size: 1.2rem;
+}
+.book.font-size-1 .book-body .page-inner section {
+  font-size: 1.6rem !important;
+}
+.book.font-size-2 .book-body .page-inner section {
+    font-size: 1.8rem !important;
+
+}
+.book.font-size-3 .book-body .page-inner section {
+  font-size: 2.2rem;
+}
+.book.font-size-4 .book-body .page-inner section {
+  font-size: 4rem;
+}
+
+.book-summary {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #364149;
+}

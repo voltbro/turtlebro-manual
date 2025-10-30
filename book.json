@@ -4,11 +4,22 @@
   "title": "TurtleBro Инструкция",
   "links": {
     "sidebar": {
-        "Братья Вольт (Voltbro)": "http://www.voltbro.com"
+        "Робот TurtleBro": "http://manual.turtlebro.ru"
     }
   },
   "pdf":{
     "fontSize": 11
   },
-  "plugins": ["hints"]
+  "plugins": [
+    "hints",
+    "addcssjs"
+  ],
+
+  "pluginsConfig": {
+    "addcssjs": {
+        "css": ["../turtlebro.css"],
+        "js": ["../turtlebro.js"]
+    }
+  } 
+     
 }

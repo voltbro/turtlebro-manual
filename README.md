@@ -10,7 +10,7 @@
 
 Видео по [первому включению робота TurtleBro](https://youtu.be/mnTkzk_5cMM)
 
-{% hint style="warning" %}
+{% hint style="working" %}
 Архив документации для ROS melodic и python2&#x20;
 
 [http://archive.turtlebro.ru/manual/melodic/](http://archive.turtlebro.ru/manual/melodic/)
