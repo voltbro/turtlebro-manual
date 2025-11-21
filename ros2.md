@@ -6,17 +6,20 @@
 
 ### Обновление образа microSD-карты Raspberry Pi
 
-Образ SD-карты с `ROS2` создан на основе дистрибутива `ROS2 Humble`. В качестве базовой ОС используется `Ubuntu Server 22.04 LTS`
+Образ SD-карты с `ROS2` создан на основе дистрибутива `ROS2 jazzy`. В качестве базовой ОС используется `Ubuntu Server 24.04 LTS`
 
-{% hint style="info" %}
-Образ проверен на `Raspberry Pi 4 - 2 Гб`
-{% endhint %}
+Образ ROS2 проверен на микрокомпьютерах:
+  * `Raspberry Pi 4 - 2 Гб`
+  * `Raspberry Pi 5 - 2 Гб`
 
-Образ можно скачать по ссылке: [https://disk.yandex.ru/d/fwXInv5GtNlwPg](https://disk.yandex.ru/d/fwXInv5GtNlwPg) 
-Все доступные прошивки для робота TurtleBro: [https://disk.yandex.ru/d/aw4XiktAn1HyUQ](https://disk.yandex.ru/d/aw4XiktAn1HyUQ)
+При подключении `Raspberry Pi 5` к роботу `TurtleBro1`, `Raspberry Pi 5` может не хватать питания. Поэтому мы не рекомендуем обновлять микрокомпьютер, а использовать `Raspberry Pi 5` только на плате `TurtleBro2`   
+
+
+Образ SD-карты, можно скачать по ссылке: [latest](https://disk.yandex.ru/d/fwXInv5GtNlwPg) 
 
 Инструкция по [обновлению образа](administrirovanie-ros/raspberrypi.md)
-Видеоинструкция по обновлению образа: [https://youtu.be/OGzLALB51Pc?si=Lx_xFs8W3NmIZM82](https://youtu.be/OGzLALB51Pc?si=Lx_xFs8W3NmIZM82)
+
+[Просмотреть](https://youtu.be/OGzLALB51Pc?si=Lx_xFs8W3NmIZM82) видеоинструкция по обновлению образа. 
 
 В образе уже установлены дополнительные пользовательские пакеты (аналоги старых пакетов ROS1):
 
@@ -24,18 +27,23 @@
 * turtlebro_navigation [https://github.com/voltbro/turtlebro2_navigation/](https://github.com/voltbro/turtlebro2_navigation/)
 * turtlebro_web [https://github.com/voltbro/turtlebro2_web](https://github.com/voltbro/turtlebro2_web)
 
+
 ### Обновление прошивки системной платы робота
 
 Для поддержки управления роботом через Raspberry необходимо обновить ПО платы Turtleboard. Новая прошивка создана на базе фреймворка `microROS` ([https://micro.ros.org](https://micro.ros.org)), являющегося "идейным" продолжением библиотеки `rosserial`. Все системные топики управления платформой работают на микроконтроллере.
 
-Прошивку для МК можно скачать по ссылке: [https://disk.yandex.ru/d/NoKRunp35baOzQ](https://disk.yandex.ru/d/NoKRunp35baOzQ) 
-Все доступные прошивки для робота TurtleBro: [https://disk.yandex.ru/d/fipuDuX39-VnuA](https://disk.yandex.ru/d/fipuDuX39-VnuA)
+Прошивку для робота TurtleBro1 и `microROS` можно скачать по ссылке: [latest](https://disk.yandex.ru/d/-XHvTQyW293yzw) 
+
+{% hint style="danger" %}
+**Внимание** Файлы прошивки для "желтой" и "синей" плат отличаются. Если вы обновляете "синюю" плату (робот TurtleBro1), убедитесь, что имя файла прошивки начинается с "TB1".
+{% endhint %}
+ 
 
 Инструкция по [обновлению МК](platforma-turtleboard/obnovlenie-mikroprogrammy/) (необходим USB-UART переходник или программатор ST-LINK V2)
 
 ### Запуск и подключение к роботу
 
-После обновления SD-карты и прошивки - робот готов для работы.
+После обновления SD-карты и прошивки - робот готов для работе.
 
 При включении, робот попытается подключиться к Wi-Fi сети согласно [настройкам сети](pervoe-vklyuchenie-i-nastroika-robota/networking.md).
 
@@ -44,6 +52,13 @@
 SSH подключение [согласно страницы](pervoe-vklyuchenie-i-nastroika-robota/ssh.md)  (пользователь `pi`, пароль `brobro`)
 
 Все необходимые сервисы и пакеты запускаются при включения робота.
+
+#### Настройка работа после загрузки
+
+Образ был оптимизирован для платы TurtleBro2 а не TurtleBro1. Для корректного функционирования робота с новым образом, необходимо внести изменения в конфигурационный файл.
+
+Для этого в файле `/home/pi/.ros_params` следует модифицировать переменную окружения `BOARD_VERSION`, установив её значение на `5`.
+
 
 ### Веб-интерфейс
 
